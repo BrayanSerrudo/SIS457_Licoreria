@@ -1,0 +1,15 @@
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\ClnLicoreria2024.dll.config
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\ClnLicoreria2024.dll
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\ClnLicoreria2024.pdb
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\CadLicoreria2024.dll
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\CadLicoreria2024.pdb
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\CadLicoreria2024.dll.config
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\obj\Debug\ClnLicoreria2024.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\obj\Debug\ClnLicoreria2024.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\obj\Debug\ClnLicor.86563E19.Up2Date
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\obj\Debug\ClnLicoreria2024.dll
+C:\Users\DELL\Documents\POSEIDON_sis457\proyectos\licoreria2024Importante\importanticimo\Licoreria2024\ClnLicoreria2024\obj\Debug\ClnLicoreria2024.pdb
