@@ -19,7 +19,6 @@ namespace CadLicoreria2024
         {
             this.DetalleCompra = new HashSet<DetalleCompra>();
             this.DetalleVenta = new HashSet<DetalleVenta>();
-            this.HistorialCompra = new HashSet<HistorialCompra>();
         }
     
         public int id { get; set; }
@@ -39,7 +38,5 @@ namespace CadLicoreria2024
         public virtual ICollection<DetalleCompra> DetalleCompra { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleVenta> DetalleVenta { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HistorialCompra> HistorialCompra { get; set; }
     }
 }

@@ -93,19 +93,6 @@
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
-  <EntityType Name="HistorialCompra">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idProducto" Type="int" Nullable="false" />
-    <Property Name="precioCompra" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="precioVenta" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="cantidad" Type="int" Nullable="false" />
-    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
-    <Property Name="estado" Type="smallint" Nullable="false" />
-  </EntityType>
   <EntityType Name="Producto">
     <Key>
       <PropertyRef Name="id" />
@@ -223,18 +210,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_HistorialCompra_Producto">
-    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
-    <End Role="HistorialCompra" Type="Self.HistorialCompra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Producto">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="HistorialCompra">
-        <PropertyRef Name="idProducto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_Producto_Categoria">
     <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
     <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
@@ -259,10 +234,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="ObtenerDetallesCompras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="FechaInicio" Type="datetime" Mode="In" />
-    <Parameter Name="FechaFin" Type="datetime" Mode="In" />
-  </Function>
+  <Function Name="ObtenerDetallesCompras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="ObtenerProductosConCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
@@ -306,7 +278,6 @@
     <EntitySet Name="DetalleNegocio" EntityType="Self.DetalleNegocio" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DetalleVenta" EntityType="Self.DetalleVenta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="HistorialCompra" EntityType="Self.HistorialCompra" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
@@ -330,10 +301,6 @@
     <AssociationSet Name="fk_DetalleVenta_Venta" Association="Self.fk_DetalleVenta_Venta">
       <End Role="Venta" EntitySet="Venta" />
       <End Role="DetalleVenta" EntitySet="DetalleVenta" />
-    </AssociationSet>
-    <AssociationSet Name="fk_HistorialCompra_Producto" Association="Self.fk_HistorialCompra_Producto">
-      <End Role="Producto" EntitySet="Producto" />
-      <End Role="HistorialCompra" EntitySet="HistorialCompra" />
     </AssociationSet>
     <AssociationSet Name="fk_Producto_Categoria" Association="Self.fk_Producto_Categoria">
       <End Role="Categoria" EntitySet="Categoria" />

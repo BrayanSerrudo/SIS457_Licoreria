@@ -330,20 +330,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <EntitySetMapping Name="HistorialCompra">
-      <EntityTypeMapping TypeName="Labsis457licoreriaModel.HistorialCompra">
-        <MappingFragment StoreEntitySet="HistorialCompra">
-          <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
-          <ScalarProperty Name="precioCompra" ColumnName="precioCompra" />
-          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="ObtenerDetallesCompras" FunctionName="Labsis457licoreriaModel.Store.ObtenerDetallesCompras">
       <ResultMapping>
         <ComplexTypeMapping TypeName="Labsis457licoreriaModel.ObtenerDetallesCompras_Result">

@@ -23,8 +23,6 @@
         <AssociationConnector Association="Labsis457licoreriaModel.fk_DetalleVenta_Venta" ManuallyRouted="false" />
         <AssociationConnector Association="Labsis457licoreriaModel.fk_Usuario_Empleado" ManuallyRouted="false" />
         <EntityTypeShape EntityType="Labsis457licoreriaModel.DetalleNegocio" Width="1.5" PointX="10.375" PointY="4.75" />
-        <EntityTypeShape EntityType="Labsis457licoreriaModel.HistorialCompra" Width="1.5" PointX="5.5" PointY="0.5" />
-        <AssociationConnector Association="Labsis457licoreriaModel.fk_HistorialCompra_Producto" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

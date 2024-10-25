@@ -38,7 +38,6 @@ namespace CadLicoreria2024
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Venta> Venta { get; set; }
         public virtual DbSet<DetalleNegocio> DetalleNegocio { get; set; }
-        public virtual DbSet<HistorialCompra> HistorialCompra { get; set; }
     
         public virtual ObjectResult<ObtenerProductosConCategoria_Result> ObtenerProductosConCategoria(string parametro)
         {
@@ -149,17 +148,9 @@ namespace CadLicoreria2024
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoPequeListar_Result>("paProductoPequeListar", parametroParameter);
         }
     
-        public virtual ObjectResult<ObtenerDetallesCompras_Result> ObtenerDetallesCompras(Nullable<System.DateTime> fechaInicio, Nullable<System.DateTime> fechaFin)
+        public virtual ObjectResult<ObtenerDetallesCompras_Result> ObtenerDetallesCompras()
         {
-            var fechaInicioParameter = fechaInicio.HasValue ?
-                new ObjectParameter("FechaInicio", fechaInicio) :
-                new ObjectParameter("FechaInicio", typeof(System.DateTime));
-    
-            var fechaFinParameter = fechaFin.HasValue ?
-                new ObjectParameter("FechaFin", fechaFin) :
-                new ObjectParameter("FechaFin", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ObtenerDetallesCompras_Result>("ObtenerDetallesCompras", fechaInicioParameter, fechaFinParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ObtenerDetallesCompras_Result>("ObtenerDetallesCompras");
         }
     }
 }

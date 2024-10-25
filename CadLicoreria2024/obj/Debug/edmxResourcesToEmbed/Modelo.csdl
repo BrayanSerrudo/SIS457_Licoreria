@@ -107,7 +107,6 @@
     <NavigationProperty Name="Categoria" Relationship="Self.fk_Producto_Categoria" FromRole="Producto" ToRole="Categoria" />
     <NavigationProperty Name="DetalleCompra" Relationship="Self.fk_DetalleCompra_Producto" FromRole="Producto" ToRole="DetalleCompra" />
     <NavigationProperty Name="DetalleVenta" Relationship="Self.fk_DetalleVenta_Producto" FromRole="Producto" ToRole="DetalleVenta" />
-    <NavigationProperty Name="HistorialCompra" Relationship="Labsis457licoreriaModel.fk_HistorialCompra_Producto" FromRole="Producto" ToRole="HistorialCompra" />
   </EntityType>
   <EntityType Name="Proveedor">
     <Key>
@@ -312,15 +311,7 @@
     <FunctionImport Name="paProductoPequeListar" ReturnType="Collection(Labsis457licoreriaModel.paProductoPequeListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <EntitySet Name="HistorialCompra" EntityType="Labsis457licoreriaModel.HistorialCompra" />
-    <AssociationSet Name="fk_HistorialCompra_Producto" Association="Labsis457licoreriaModel.fk_HistorialCompra_Producto">
-      <End Role="Producto" EntitySet="Producto" />
-      <End Role="HistorialCompra" EntitySet="HistorialCompra" />
-    </AssociationSet>
-    <FunctionImport Name="ObtenerDetallesCompras" ReturnType="Collection(Labsis457licoreriaModel.ObtenerDetallesCompras_Result)">
-      <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
-      <Parameter Name="FechaFin" Mode="In" Type="DateTime" />
-    </FunctionImport>
+    <FunctionImport Name="ObtenerDetallesCompras" ReturnType="Collection(Labsis457licoreriaModel.ObtenerDetallesCompras_Result)" />
   </EntityContainer>
   <ComplexType Name="ObtenerProductosConCategoria_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -450,32 +441,6 @@
     <Property Type="Int32" Name="stock" Nullable="false" />
     <Property Type="Decimal" Name="precioVenta" Nullable="true" Precision="10" Scale="2" />
   </ComplexType>
-  <EntityType Name="HistorialCompra">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="idProducto" Type="Int32" Nullable="false" />
-    <Property Name="precioCompra" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-    <Property Name="precioVenta" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-    <Property Name="cantidad" Type="Int32" Nullable="false" />
-    <Property Name="usuarioRegistro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="estado" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Producto" Relationship="Labsis457licoreriaModel.fk_HistorialCompra_Producto" FromRole="HistorialCompra" ToRole="Producto" />
-  </EntityType>
-  <Association Name="fk_HistorialCompra_Producto">
-    <End Type="Labsis457licoreriaModel.Producto" Role="Producto" Multiplicity="1" />
-    <End Type="Labsis457licoreriaModel.HistorialCompra" Role="HistorialCompra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Producto">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="HistorialCompra">
-        <PropertyRef Name="idProducto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <ComplexType Name="ObtenerDetallesCompras_Result">
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="String" Name="tipoDocumento" Nullable="false" MaxLength="50" />

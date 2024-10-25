@@ -14,7 +14,7 @@ GO
 ALTER ROLE [db_owner] ADD MEMBER [usrlicoreria]
 GO
 
-DROP TABLE HistorialCompra;
+
 DROP TABLE Empleado;
 DROP TABLE DetalleVenta;
 DROP TABLE Venta;
@@ -97,9 +97,7 @@ CREATE TABLE Producto (
   precioVenta DECIMAL(10,2) DEFAULT 0,
   CONSTRAINT fk_Producto_Categoria FOREIGN KEY (idCategoria) REFERENCES Categoria(id)
 );
-SELECT * FROM DetalleCompra WHERE idCompra = [idCompra]; 
-select * from Proveedor;
-select* from compra
+
 
 CREATE TABLE DetalleCompra (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -137,29 +135,7 @@ CREATE TABLE DetalleVenta (
   CONSTRAINT fk_DetalleVenta_Producto FOREIGN KEY (idProducto) REFERENCES Producto(id)
 ); 
 
-CREATE TABLE HistorialCompra (
-    id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-    idProducto INT NOT NULL,
-    precioCompra DECIMAL(10,2) NOT NULL,
-    precioVenta DECIMAL(10,2) NOT NULL,
-    cantidad INT NOT NULL,
-    CONSTRAINT fk_HistorialCompra_Producto FOREIGN KEY (idProducto) REFERENCES Producto(id)
-);
 
-
-
-
-SELECT * FROM HistorialCompra(1,10,12,1);
-INSERT INTO HistorialCompra(idProducto, precioCompra, precioVenta, cantidad)
-VALUES (1,10,12,1);
-select*from DetalleCompra 
-
-
-
-
-ALTER TABLE HistorialCompra ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
-ALTER TABLE HistorialCompra ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
-ALTER TABLE HistorialCompra ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
 
 ALTER TABLE DetalleNegocio ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
@@ -490,4 +466,17 @@ END
 exec ObtenerDetallesCompras;
 
 
-select * from Venta;
+--limpieza
+DELETE FROM Venta;
+select * from Proveedor;
+
+DBCC CHECKIDENT ('Producto', RESEED, 0);
+DBCC CHECKIDENT ('Cliente', RESEED, 0);
+DBCC CHECKIDENT ('DetalleCompra', RESEED, 0);
+DBCC CHECKIDENT ('Compra', RESEED, 0);
+DBCC CHECKIDENT ('Proveedor', RESEED, 0);
+DBCC CHECKIDENT ('Categoria', RESEED, 0);
+DBCC CHECKIDENT ('DetalleVenta', RESEED, 0);
+DBCC CHECKIDENT ('Venta', RESEED, 0);
+
+
