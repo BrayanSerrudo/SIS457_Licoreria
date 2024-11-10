@@ -69,7 +69,7 @@ namespace CpLicoreria2024
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //CargarFormularioEnPanel(new FrmProducto()); //cargar a panelcontenedor
-            new FrmProducto().ShowDialog();
+            new Frmdsds().ShowDialog();
         }
 
         private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)

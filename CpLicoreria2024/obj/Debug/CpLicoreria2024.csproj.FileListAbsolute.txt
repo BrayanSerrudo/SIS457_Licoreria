@@ -90,3 +90,4 @@ C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\Cp
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicore.7D7F2FD5.Up2Date
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.exe
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.pdb
+C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.Form1sdascs.resources
