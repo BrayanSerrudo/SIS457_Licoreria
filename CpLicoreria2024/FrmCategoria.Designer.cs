@@ -51,7 +51,7 @@
 			// txtParametroCategoria
 			// 
 			this.txtParametroCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtParametroCategoria.Location = new System.Drawing.Point(316, 61);
+			this.txtParametroCategoria.Location = new System.Drawing.Point(485, 35);
 			this.txtParametroCategoria.Margin = new System.Windows.Forms.Padding(4);
 			this.txtParametroCategoria.Name = "txtParametroCategoria";
 			this.txtParametroCategoria.Size = new System.Drawing.Size(249, 24);
@@ -62,7 +62,7 @@
 			// 
 			this.lblBusqueda.BackColor = System.Drawing.Color.White;
 			this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblBusqueda.Location = new System.Drawing.Point(265, 34);
+			this.lblBusqueda.Location = new System.Drawing.Point(310, 40);
 			this.lblBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBusqueda.Name = "lblBusqueda";
 			this.lblBusqueda.Size = new System.Drawing.Size(179, 25);
@@ -105,16 +105,14 @@
 			// 
 			this.dgvListaCategoria.AllowUserToAddRows = false;
 			this.dgvListaCategoria.AllowUserToDeleteRows = false;
-			this.dgvListaCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.dgvListaCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvListaCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvListaCategoria.Location = new System.Drawing.Point(268, 93);
+			this.dgvListaCategoria.Location = new System.Drawing.Point(266, 93);
 			this.dgvListaCategoria.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvListaCategoria.Name = "dgvListaCategoria";
 			this.dgvListaCategoria.ReadOnly = true;
 			this.dgvListaCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvListaCategoria.Size = new System.Drawing.Size(514, 355);
+			this.dgvListaCategoria.Size = new System.Drawing.Size(681, 223);
 			this.dgvListaCategoria.TabIndex = 93;
 			// 
 			// erpDescripcionCategoria
@@ -125,7 +123,7 @@
 			// 
 			this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnLimpiar.Image = global::CpLicoreria2024.Properties.Resources.limpiar;
-			this.btnLimpiar.Location = new System.Drawing.Point(683, 34);
+			this.btnLimpiar.Location = new System.Drawing.Point(846, 24);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(101, 51);
 			this.btnLimpiar.TabIndex = 120;
@@ -138,7 +136,7 @@
 			// 
 			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnBuscar.Image = global::CpLicoreria2024.Properties.Resources.buscar;
-			this.btnBuscar.Location = new System.Drawing.Point(578, 34);
+			this.btnBuscar.Location = new System.Drawing.Point(741, 24);
 			this.btnBuscar.Name = "btnBuscar";
 			this.btnBuscar.Size = new System.Drawing.Size(99, 51);
 			this.btnBuscar.TabIndex = 119;
@@ -149,10 +147,9 @@
 			// 
 			// btnNuevo
 			// 
-			this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNuevo.Image = global::CpLicoreria2024.Properties.Resources.Nuevo;
-			this.btnNuevo.Location = new System.Drawing.Point(19, 285);
+			this.btnNuevo.Location = new System.Drawing.Point(19, 151);
 			this.btnNuevo.Name = "btnNuevo";
 			this.btnNuevo.Size = new System.Drawing.Size(102, 51);
 			this.btnNuevo.TabIndex = 118;
@@ -163,10 +160,9 @@
 			// 
 			// btnEditar
 			// 
-			this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEditar.Image = global::CpLicoreria2024.Properties.Resources.editar;
-			this.btnEditar.Location = new System.Drawing.Point(141, 342);
+			this.btnEditar.Location = new System.Drawing.Point(141, 208);
 			this.btnEditar.Name = "btnEditar";
 			this.btnEditar.Size = new System.Drawing.Size(102, 51);
 			this.btnEditar.TabIndex = 117;
@@ -177,10 +173,9 @@
 			// 
 			// btnEliminar
 			// 
-			this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEliminar.Image = global::CpLicoreria2024.Properties.Resources.eliminar;
-			this.btnEliminar.Location = new System.Drawing.Point(19, 399);
+			this.btnEliminar.Location = new System.Drawing.Point(19, 265);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(102, 51);
 			this.btnEliminar.TabIndex = 116;
@@ -191,10 +186,9 @@
 			// 
 			// btnCerrar
 			// 
-			this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCerrar.Image = global::CpLicoreria2024.Properties.Resources.cerrar;
-			this.btnCerrar.Location = new System.Drawing.Point(141, 399);
+			this.btnCerrar.Location = new System.Drawing.Point(141, 265);
 			this.btnCerrar.Name = "btnCerrar";
 			this.btnCerrar.Size = new System.Drawing.Size(102, 51);
 			this.btnCerrar.TabIndex = 115;
@@ -205,10 +199,9 @@
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnGuardar.Image = global::CpLicoreria2024.Properties.Resources.Guardar;
-			this.btnGuardar.Location = new System.Drawing.Point(19, 342);
+			this.btnGuardar.Location = new System.Drawing.Point(19, 208);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(102, 51);
 			this.btnGuardar.TabIndex = 114;
@@ -232,8 +225,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+			this.AutoSize = true;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(793, 461);
+			this.ClientSize = new System.Drawing.Size(954, 327);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnBuscar);
 			this.Controls.Add(this.btnNuevo);
@@ -249,11 +243,8 @@
 			this.Controls.Add(this.lblDescripcionCategoria);
 			this.Controls.Add(this.dgvListaCategoria);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Margin = new System.Windows.Forms.Padding(4);
-			this.MaximizeBox = false;
 			this.Name = "FrmCategoria";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "::: Licoreria - Categoria :::";
 			this.Load += new System.EventHandler(this.FrmCategoria_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvListaCategoria)).EndInit();

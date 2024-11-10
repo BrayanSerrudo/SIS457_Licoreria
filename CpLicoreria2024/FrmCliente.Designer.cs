@@ -73,7 +73,7 @@
 			// 
 			this.txtParametroCliente.Location = new System.Drawing.Point(455, 38);
 			this.txtParametroCliente.Name = "txtParametroCliente";
-			this.txtParametroCliente.Size = new System.Drawing.Size(265, 26);
+			this.txtParametroCliente.Size = new System.Drawing.Size(265, 20);
 			this.txtParametroCliente.TabIndex = 83;
 			this.txtParametroCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametroCliente_KeyPress);
 			// 
@@ -83,7 +83,7 @@
 			this.lblBusqueda.BackColor = System.Drawing.Color.White;
 			this.lblBusqueda.Location = new System.Drawing.Point(270, 38);
 			this.lblBusqueda.Name = "lblBusqueda";
-			this.lblBusqueda.Size = new System.Drawing.Size(221, 60);
+			this.lblBusqueda.Size = new System.Drawing.Size(155, 39);
 			this.lblBusqueda.TabIndex = 82;
 			this.lblBusqueda.Text = "Buscar por   N° Documento,\r\n                    Nombre Completo,\r\n               " +
     "     Correo o Teléfono:\r\n";
@@ -334,7 +334,6 @@
 			this.Controls.Add(this.lblDocumento);
 			this.Controls.Add(this.dgvListaCliente);
 			this.Controls.Add(this.label1);
-			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "FrmCliente";
 			this.Text = "::: Licoreria - Cliente :::";
 			this.Load += new System.EventHandler(this.FrmCliente_Load);
