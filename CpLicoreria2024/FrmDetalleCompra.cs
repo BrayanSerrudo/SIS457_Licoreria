@@ -28,6 +28,9 @@ namespace CpLicoreria2024
 			dgvDetalles.Columns.Add("precioVenta", "Precio de Venta");
 			dgvDetalles.Columns.Add("cantidad", "Cantidad");
 			dgvDetalles.Columns.Add("total", "Total");
+
+			dgvDetalles.Columns["idProducto"].Visible = false;
+			dgvDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 		}
 
 
@@ -76,6 +79,7 @@ namespace CpLicoreria2024
 			{
 				MessageBox.Show("Compra no encontrada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
+			HabilitarCampos();
 		}
 
 		private void CalcularTotalPagar()
@@ -96,6 +100,22 @@ namespace CpLicoreria2024
 		}
 
 
+		private void DesactivarCampos()
+		{
+			txtFecha.Enabled = false;
+			txtTipoDocumento.Enabled = false;
+			txtUsuario.Enabled = false;
+			txtDocuProveedor.Enabled = false;
+			txtRazonSocial.Enabled = false;
+		}
+		private void HabilitarCampos()
+		{
+			txtFecha.Enabled = true;
+			txtTipoDocumento.Enabled = true;
+			txtUsuario.Enabled = true;
+			txtDocuProveedor.Enabled = true;
+			txtRazonSocial.Enabled = true;
+		}
 
 
 
@@ -150,7 +170,33 @@ namespace CpLicoreria2024
 			}
 		}
 
-		
+		private void FrmDetalleCompra_Load(object sender, EventArgs e)
+		{
+			txtNFacturaBoleta.KeyPress += Util.onlyNumbers;
+			DesactivarCampos();
+			dgvDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+		}
+
+		private void btnLimpiarNFactura_Click(object sender, EventArgs e)
+		{
+			limpiar();
+			limpiarDatos();
+			DesactivarCampos();
+		}
+
+		private void limpiar() 
+		{
+		  txtNFacturaBoleta.Text = string.Empty;
+		}
+
+		private void limpiarDatos() 
+		{
+			txtFecha.Text = string.Empty;
+			txtTipoDocumento.Text = string.Empty;
+			txtUsuario.Text = string.Empty;
+			txtDocuProveedor.Text = string.Empty;
+			txtRazonSocial.Text = string.Empty;
+		}
 	} 
 	
 }

@@ -232,5 +232,10 @@ namespace CpLicoreria2024
 		{
             limpiarBusqueda();
 		}
+
+		private void lblTitulo_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

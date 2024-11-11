@@ -34,50 +34,38 @@ namespace CpLicoreria2024
             dgvLista.Columns["telefono"].HeaderText = "Teléfono";
 
 
-            iBtnEditar.Enabled = lista.Count() > 0;
-            iBtnEliminar.Enabled = lista.Count() > 0;
+            btnEditar.Enabled = lista.Count() > 0;
+            btnEliminar.Enabled = lista.Count() > 0;
 
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["documento"];
         }
 
-        private void ibtnCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void FrmProveedor_Load(object sender, EventArgs e)
         {
-            listar();
+			txtDocumento.KeyPress += Util.onlyNumbers;
+			txtRazonSocial.KeyPress += Util.onlyLetters;
+			txtTelefono.KeyPress += Util.onlyNumbers;
+			DesactivarCampos();
+			listar();
         }
 
-        private void iBtnBuscar_Click(object sender, EventArgs e)
-        {
-            listar();
-        }
+		private void DesactivarCampos()
+		{
+			txtDocumento.Enabled = false;
+			txtRazonSocial.Enabled = false;
+			txtCorreo.Enabled = false;
+			txtTelefono.Enabled = false;
+		}
+		private void HabilitarCampos()
+		{
+			txtDocumento.Enabled = true;
+			txtRazonSocial.Enabled = true;
+			txtCorreo.Enabled = true;
+			txtTelefono.Enabled = true;
+		}
 
-   
-
-        private void iBtnNuevo_Click(object sender, EventArgs e)
-        {
-            esNuevo = true;
-            txtDocumento.Focus(); //para que el puntero parpadee en el texto de documento al presionar btnNuevo
-            limpiar();
-        }
-
-        private void iBtnEditar_Click(object sender, EventArgs e)
-        {
-            esNuevo = false;
-            int index = dgvLista.CurrentCell.RowIndex;
-            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-            var proveedor = ProveedorCln.obtenerUno(id);
-            txtDocumento.Text = proveedor.documento;
-            txtRazonSocial.Text = proveedor.razonSocial;
-            txtCorreo.Text = proveedor.email;
-            txtTelefono.Text = proveedor.telefono;
-            txtDocumento.Focus();
-        }
-        //todo lo de abajo va junto 
-        private bool validar()
+		private bool validar()
         {
             bool esValido = true;
             erpDocumento.SetError(txtDocumento, "");
@@ -109,35 +97,7 @@ namespace CpLicoreria2024
             return esValido;
         }
 
-        private void iBtnGuardar_Click(object sender, EventArgs e)
-        {
-            if (validar())
-            {
-                var proveedor = new Proveedor();
-                proveedor.documento = txtDocumento.Text.Trim();
-                proveedor.razonSocial = txtRazonSocial.Text.Trim();
-                proveedor.email = txtCorreo.Text.Trim();
-                proveedor.telefono = txtTelefono.Text.Trim();
-                proveedor.usuarioRegistro = Util.usuario.usuario1;
-                if (esNuevo)
-                {
-                    proveedor.fechaRegistro = DateTime.Now;
-                    proveedor.estado = 1;
-                    ProveedorCln.insertar(proveedor);
-                }
-                else
-                {
-                    int index = dgvLista.CurrentCell.RowIndex;
-                    proveedor.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-                    ProveedorCln.actualizar(proveedor);
-                }
-                listar();
-                MessageBox.Show("Proveedor guardado correctamente", ":::Licoreria - Mensaje :::",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void limpiar()
+		private void limpiar()
         {
             txtDocumento.Text = string.Empty;
             txtRazonSocial.Text = string.Empty;
@@ -149,31 +109,95 @@ namespace CpLicoreria2024
            txtParametroProveedor.Text = string.Empty;
         }
 
-        private void iBtnEliminar_Click(object sender, EventArgs e)
-        {
-            int index = dgvLista.CurrentCell.RowIndex;
-            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-            string documento = dgvLista.Rows[index].Cells["documento"].Value.ToString();
-            DialogResult dialog =
-                MessageBox.Show($"¿Está seguro que desea dar de baja al proveedor con N° de documento {documento}?",
-                "::: Licoreria - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialog == DialogResult.OK)
-            {
-                ProveedorCln.eliminar(id, Util.usuario.usuario1);
-                listar();
-                MessageBox.Show("Proveedor dado de baja correctamente", "::: Licoreria - Mensaje :::",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void iBtnLimpiar_Click(object sender, EventArgs e)
-        {
-            limpiarlista();
-        }
 
         private void txtParametroProveedor_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == (char)Keys.Enter) listar();
         }
-    }
+        //---------------------------------------------------------------------
+		private void btnNuevo_Click(object sender, EventArgs e)
+		{
+			esNuevo = true;
+			txtDocumento.Focus(); //para que el puntero parpadee en el texto de documento al presionar btnNuevo
+			HabilitarCampos();
+			limpiar();
+		}
+
+		private void btnGuardar_Click(object sender, EventArgs e)
+		{
+			if (validar())
+			{
+				var proveedor = new Proveedor();
+				proveedor.documento = txtDocumento.Text.Trim();
+				proveedor.razonSocial = txtRazonSocial.Text.Trim();
+				proveedor.email = txtCorreo.Text.Trim();
+				proveedor.telefono = txtTelefono.Text.Trim();
+				proveedor.usuarioRegistro = Util.usuario.usuario1;
+				if (esNuevo)
+				{
+					proveedor.fechaRegistro = DateTime.Now;
+					proveedor.estado = 1;
+					ProveedorCln.insertar(proveedor);
+				}
+				else
+				{
+					int index = dgvLista.CurrentCell.RowIndex;
+					proveedor.id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+					ProveedorCln.actualizar(proveedor);
+				}
+				listar();
+				MessageBox.Show("Proveedor guardado correctamente", ":::Licoreria - Mensaje :::",
+					MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			limpiar();
+			DesactivarCampos();
+		}
+
+		private void btnEditar_Click(object sender, EventArgs e)
+		{
+			esNuevo = false;
+			int index = dgvLista.CurrentCell.RowIndex;
+			int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+			var proveedor = ProveedorCln.obtenerUno(id);
+			txtDocumento.Text = proveedor.documento;
+			txtRazonSocial.Text = proveedor.razonSocial;
+			txtCorreo.Text = proveedor.email;
+			txtTelefono.Text = proveedor.telefono;
+			txtDocumento.Focus();
+			HabilitarCampos();
+		}
+
+		private void btnEliminar_Click(object sender, EventArgs e)
+		{
+			int index = dgvLista.CurrentCell.RowIndex;
+			int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+			string documento = dgvLista.Rows[index].Cells["documento"].Value.ToString();
+			DialogResult dialog =
+				MessageBox.Show($"¿Está seguro que desea dar de baja al proveedor con N° de documento {documento}?",
+				"::: Licoreria - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+			if (dialog == DialogResult.OK)
+			{
+				ProveedorCln.eliminar(id, Util.usuario.usuario1);
+				listar();
+				MessageBox.Show("Proveedor dado de baja correctamente", "::: Licoreria - Mensaje :::",
+					MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+		}
+
+		private void btnCerrar_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
+
+			listar();
+		}
+
+		private void btnLimpiar_Click(object sender, EventArgs e)
+		{
+			limpiarlista();
+		}
+	}
 }

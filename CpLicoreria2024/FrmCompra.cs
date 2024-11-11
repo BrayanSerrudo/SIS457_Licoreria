@@ -43,10 +43,22 @@ namespace CpLicoreria2024
             dgvCompras.Columns.Add("cantidad", "Cantidad");
             dgvCompras.Columns.Add("total", "Total");
 
- 
-        }
-
-        public void SetProveedorData(string idProveedor, string documento, string razonSocial)
+			dgvCompras.Columns["idProducto"].Visible = false;
+			dgvCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+			DesactivarCamposProductos();
+			DesactivarCamposProveedor();
+		}
+		private void DesactivarCamposProductos()
+		{
+			txtCodigoProducto.Enabled = false;
+			txtProducto.Enabled = false;
+		}
+		private void HabilitarCamposProductos()
+		{
+			txtCodigoProducto.Enabled = true;
+			txtProducto.Enabled = true;
+		}
+		public void SetProveedorData(string idProveedor, string documento, string razonSocial)
         {
             txtIdProveedor.Text = idProveedor;  // Asumiendo que tienes este TextBox
             txtDocuProveedor.Text = documento; // Asumiendo que tienes este TextBox
@@ -411,12 +423,25 @@ namespace CpLicoreria2024
 		{
 			FrmPequeProveedor proveedorForm = new FrmPequeProveedor(this);
 			proveedorForm.ShowDialog();
+			HabilitarCamposProveedor();
 		}
 
 		private void btnBuscarProducto_Click(object sender, EventArgs e)
 		{
 			FrmPequeProducto productoFrm = new FrmPequeProducto(this);
 			productoFrm.ShowDialog();
+			HabilitarCamposProductos();
+		}
+
+		private void DesactivarCamposProveedor()
+		{
+			txtDocuProveedor.Enabled = false;
+			txtRazonSocial.Enabled = false;
+		}
+		private void HabilitarCamposProveedor()
+		{
+			txtDocuProveedor.Enabled = true;
+			txtRazonSocial.Enabled = true;
 		}
 	}
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoria));
 			this.txtParametroCategoria = new System.Windows.Forms.TextBox();
 			this.lblBusqueda = new System.Windows.Forms.Label();
 			this.lblTitulo = new System.Windows.Forms.Label();
@@ -50,22 +51,23 @@
 			// 
 			// txtParametroCategoria
 			// 
-			this.txtParametroCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtParametroCategoria.Location = new System.Drawing.Point(485, 35);
+			this.txtParametroCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtParametroCategoria.Location = new System.Drawing.Point(472, 46);
 			this.txtParametroCategoria.Margin = new System.Windows.Forms.Padding(4);
 			this.txtParametroCategoria.Name = "txtParametroCategoria";
-			this.txtParametroCategoria.Size = new System.Drawing.Size(249, 24);
+			this.txtParametroCategoria.Size = new System.Drawing.Size(241, 29);
 			this.txtParametroCategoria.TabIndex = 105;
 			this.txtParametroCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametroCategoria_KeyPress);
 			// 
 			// lblBusqueda
 			// 
-			this.lblBusqueda.BackColor = System.Drawing.Color.White;
-			this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblBusqueda.Location = new System.Drawing.Point(310, 40);
+			this.lblBusqueda.BackColor = System.Drawing.Color.Transparent;
+			this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblBusqueda.ForeColor = System.Drawing.Color.Lime;
+			this.lblBusqueda.Location = new System.Drawing.Point(266, 50);
 			this.lblBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBusqueda.Name = "lblBusqueda";
-			this.lblBusqueda.Size = new System.Drawing.Size(179, 25);
+			this.lblBusqueda.Size = new System.Drawing.Size(216, 25);
 			this.lblBusqueda.TabIndex = 104;
 			this.lblBusqueda.Text = "Buscar por Descripción :";
 			// 
@@ -73,31 +75,33 @@
 			// 
 			this.lblTitulo.AutoSize = true;
 			this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-			this.lblTitulo.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTitulo.Location = new System.Drawing.Point(15, 10);
+			this.lblTitulo.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitulo.ForeColor = System.Drawing.Color.Aqua;
+			this.lblTitulo.Location = new System.Drawing.Point(16, 25);
 			this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblTitulo.Name = "lblTitulo";
-			this.lblTitulo.Size = new System.Drawing.Size(170, 20);
+			this.lblTitulo.Size = new System.Drawing.Size(211, 23);
 			this.lblTitulo.TabIndex = 101;
 			this.lblTitulo.Text = "Detalle de Categorias";
 			// 
 			// txtDescripcionCategoria
 			// 
-			this.txtDescripcionCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDescripcionCategoria.Location = new System.Drawing.Point(19, 67);
+			this.txtDescripcionCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDescripcionCategoria.Location = new System.Drawing.Point(20, 93);
 			this.txtDescripcionCategoria.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDescripcionCategoria.Name = "txtDescripcionCategoria";
-			this.txtDescripcionCategoria.Size = new System.Drawing.Size(224, 24);
+			this.txtDescripcionCategoria.Size = new System.Drawing.Size(225, 29);
 			this.txtDescripcionCategoria.TabIndex = 95;
 			// 
 			// lblDescripcionCategoria
 			// 
 			this.lblDescripcionCategoria.BackColor = System.Drawing.Color.Transparent;
-			this.lblDescripcionCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDescripcionCategoria.Location = new System.Drawing.Point(16, 40);
+			this.lblDescripcionCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDescripcionCategoria.ForeColor = System.Drawing.Color.SpringGreen;
+			this.lblDescripcionCategoria.Location = new System.Drawing.Point(16, 66);
 			this.lblDescripcionCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblDescripcionCategoria.Name = "lblDescripcionCategoria";
-			this.lblDescripcionCategoria.Size = new System.Drawing.Size(169, 23);
+			this.lblDescripcionCategoria.Size = new System.Drawing.Size(198, 23);
 			this.lblDescripcionCategoria.TabIndex = 94;
 			this.lblDescripcionCategoria.Text = "Nombre de Categoría:";
 			// 
@@ -111,8 +115,9 @@
 			this.dgvListaCategoria.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvListaCategoria.Name = "dgvListaCategoria";
 			this.dgvListaCategoria.ReadOnly = true;
+			this.dgvListaCategoria.RowTemplate.Height = 28;
 			this.dgvListaCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvListaCategoria.Size = new System.Drawing.Size(681, 223);
+			this.dgvListaCategoria.Size = new System.Drawing.Size(447, 284);
 			this.dgvListaCategoria.TabIndex = 93;
 			// 
 			// erpDescripcionCategoria
@@ -123,7 +128,7 @@
 			// 
 			this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnLimpiar.Image = global::CpLicoreria2024.Properties.Resources.limpiar;
-			this.btnLimpiar.Location = new System.Drawing.Point(846, 24);
+			this.btnLimpiar.Location = new System.Drawing.Point(825, 25);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(101, 51);
 			this.btnLimpiar.TabIndex = 120;
@@ -136,7 +141,7 @@
 			// 
 			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnBuscar.Image = global::CpLicoreria2024.Properties.Resources.buscar;
-			this.btnBuscar.Location = new System.Drawing.Point(741, 24);
+			this.btnBuscar.Location = new System.Drawing.Point(720, 25);
 			this.btnBuscar.Name = "btnBuscar";
 			this.btnBuscar.Size = new System.Drawing.Size(99, 51);
 			this.btnBuscar.TabIndex = 119;
@@ -149,9 +154,9 @@
 			// 
 			this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNuevo.Image = global::CpLicoreria2024.Properties.Resources.Nuevo;
-			this.btnNuevo.Location = new System.Drawing.Point(19, 151);
+			this.btnNuevo.Location = new System.Drawing.Point(20, 210);
 			this.btnNuevo.Name = "btnNuevo";
-			this.btnNuevo.Size = new System.Drawing.Size(102, 51);
+			this.btnNuevo.Size = new System.Drawing.Size(116, 51);
 			this.btnNuevo.TabIndex = 118;
 			this.btnNuevo.Text = "Nuevo";
 			this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -162,7 +167,7 @@
 			// 
 			this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEditar.Image = global::CpLicoreria2024.Properties.Resources.editar;
-			this.btnEditar.Location = new System.Drawing.Point(141, 208);
+			this.btnEditar.Location = new System.Drawing.Point(142, 267);
 			this.btnEditar.Name = "btnEditar";
 			this.btnEditar.Size = new System.Drawing.Size(102, 51);
 			this.btnEditar.TabIndex = 117;
@@ -175,9 +180,9 @@
 			// 
 			this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEliminar.Image = global::CpLicoreria2024.Properties.Resources.eliminar;
-			this.btnEliminar.Location = new System.Drawing.Point(19, 265);
+			this.btnEliminar.Location = new System.Drawing.Point(20, 324);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(102, 51);
+			this.btnEliminar.Size = new System.Drawing.Size(116, 51);
 			this.btnEliminar.TabIndex = 116;
 			this.btnEliminar.Text = "Eliminar";
 			this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,7 +193,7 @@
 			// 
 			this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCerrar.Image = global::CpLicoreria2024.Properties.Resources.cerrar;
-			this.btnCerrar.Location = new System.Drawing.Point(141, 265);
+			this.btnCerrar.Location = new System.Drawing.Point(142, 324);
 			this.btnCerrar.Name = "btnCerrar";
 			this.btnCerrar.Size = new System.Drawing.Size(102, 51);
 			this.btnCerrar.TabIndex = 115;
@@ -201,9 +206,9 @@
 			// 
 			this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnGuardar.Image = global::CpLicoreria2024.Properties.Resources.Guardar;
-			this.btnGuardar.Location = new System.Drawing.Point(19, 208);
+			this.btnGuardar.Location = new System.Drawing.Point(20, 267);
 			this.btnGuardar.Name = "btnGuardar";
-			this.btnGuardar.Size = new System.Drawing.Size(102, 51);
+			this.btnGuardar.Size = new System.Drawing.Size(116, 51);
 			this.btnGuardar.TabIndex = 114;
 			this.btnGuardar.Text = "Guardar";
 			this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -212,12 +217,13 @@
 			// 
 			// lblSubtitulo
 			// 
-			this.lblSubtitulo.BackColor = System.Drawing.Color.White;
-			this.lblSubtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblSubtitulo.BackColor = System.Drawing.Color.Transparent;
+			this.lblSubtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblSubtitulo.ForeColor = System.Drawing.Color.Lime;
 			this.lblSubtitulo.Location = new System.Drawing.Point(264, 7);
 			this.lblSubtitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblSubtitulo.Name = "lblSubtitulo";
-			this.lblSubtitulo.Size = new System.Drawing.Size(761, 79);
+			this.lblSubtitulo.Size = new System.Drawing.Size(199, 33);
 			this.lblSubtitulo.TabIndex = 102;
 			this.lblSubtitulo.Text = "Lista de Categorias:";
 			// 
@@ -226,8 +232,9 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.AutoSize = true;
-			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(954, 327);
+			this.BackColor = System.Drawing.Color.SeaGreen;
+			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x666;
+			this.ClientSize = new System.Drawing.Size(967, 399);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnBuscar);
 			this.Controls.Add(this.btnNuevo);
@@ -242,8 +249,11 @@
 			this.Controls.Add(this.txtDescripcionCategoria);
 			this.Controls.Add(this.lblDescripcionCategoria);
 			this.Controls.Add(this.dgvListaCategoria);
-			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4);
+			this.MaximizeBox = false;
 			this.Name = "FrmCategoria";
 			this.Text = "::: Licoreria - Categoria :::";
 			this.Load += new System.EventHandler(this.FrmCategoria_Load);

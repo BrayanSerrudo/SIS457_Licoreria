@@ -103,6 +103,16 @@ namespace CpLicoreria2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cerveza_vaso_984x6661 {
+            get {
+                object obj = ResourceManager.GetObject("cerveza_vaso-984x6661", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -153,6 +163,66 @@ namespace CpLicoreria2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap find_search_locate_9572 {
+            get {
+                object obj = ResourceManager.GetObject("find_search_locate_9572", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_search_locate_95721 {
+            get {
+                object obj = ResourceManager.GetObject("find_search_locate_95721", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_search_locate_95722 {
+            get {
+                object obj = ResourceManager.GetObject("find_search_locate_95722", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_search_locate_95723 {
+            get {
+                object obj = ResourceManager.GetObject("find_search_locate_95723", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_search_locate_95724 {
+            get {
+                object obj = ResourceManager.GetObject("find_search_locate_95724", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_search_locate_95725 {
+            get {
+                object obj = ResourceManager.GetObject("find_search_locate_95725", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Guardar {
             get {
                 object obj = ResourceManager.GetObject("Guardar", resourceCulture);
@@ -176,6 +246,16 @@ namespace CpLicoreria2024.Properties {
         internal static System.Drawing.Bitmap imaLogo {
             get {
                 object obj = ResourceManager.GetObject("imaLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imaLogo1 {
+            get {
+                object obj = ResourceManager.GetObject("imaLogo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

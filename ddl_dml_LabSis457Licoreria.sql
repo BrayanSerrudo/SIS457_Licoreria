@@ -325,7 +325,6 @@ GO
 
 
 
-
   --procedimiento almacenado para categoria-producto                            (UTIZADO EN CRUD producto NO TOCAR)
   ALTER PROC paProductooListar @parametro VARCHAR(100)
   AS BEGIN 

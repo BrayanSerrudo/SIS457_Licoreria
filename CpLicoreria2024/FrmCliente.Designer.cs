@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
 			this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
 			this.txtParametroCliente = new System.Windows.Forms.TextBox();
 			this.lblBusqueda = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
 			this.txtDocumentoCliente = new System.Windows.Forms.TextBox();
 			this.lblDocumento = new System.Windows.Forms.Label();
 			this.dgvListaCliente = new System.Windows.Forms.DataGridView();
-			this.label1 = new System.Windows.Forms.Label();
 			this.erpCorreoCliente = new System.Windows.Forms.ErrorProvider(this.components);
 			this.erpNombreCompleto = new System.Windows.Forms.ErrorProvider(this.components);
 			this.erpDocumentoCliente = new System.Windows.Forms.ErrorProvider(this.components);
@@ -63,117 +63,126 @@
 			// 
 			// txtTelefonoCliente
 			// 
-			this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTelefonoCliente.Location = new System.Drawing.Point(19, 238);
+			this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTelefonoCliente.Location = new System.Drawing.Point(17, 257);
 			this.txtTelefonoCliente.Name = "txtTelefonoCliente";
-			this.txtTelefonoCliente.Size = new System.Drawing.Size(210, 22);
+			this.txtTelefonoCliente.Size = new System.Drawing.Size(219, 29);
 			this.txtTelefonoCliente.TabIndex = 84;
 			// 
 			// txtParametroCliente
 			// 
-			this.txtParametroCliente.Location = new System.Drawing.Point(455, 38);
+			this.txtParametroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtParametroCliente.Location = new System.Drawing.Point(515, 38);
 			this.txtParametroCliente.Name = "txtParametroCliente";
-			this.txtParametroCliente.Size = new System.Drawing.Size(265, 20);
+			this.txtParametroCliente.Size = new System.Drawing.Size(340, 29);
 			this.txtParametroCliente.TabIndex = 83;
 			this.txtParametroCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametroCliente_KeyPress);
 			// 
 			// lblBusqueda
 			// 
 			this.lblBusqueda.AutoSize = true;
-			this.lblBusqueda.BackColor = System.Drawing.Color.White;
-			this.lblBusqueda.Location = new System.Drawing.Point(270, 38);
+			this.lblBusqueda.BackColor = System.Drawing.Color.Transparent;
+			this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblBusqueda.ForeColor = System.Drawing.Color.Lime;
+			this.lblBusqueda.Location = new System.Drawing.Point(251, 38);
 			this.lblBusqueda.Name = "lblBusqueda";
-			this.lblBusqueda.Size = new System.Drawing.Size(155, 39);
+			this.lblBusqueda.Size = new System.Drawing.Size(258, 60);
 			this.lblBusqueda.TabIndex = 82;
 			this.lblBusqueda.Text = "Buscar por   N° Documento,\r\n                    Nombre Completo,\r\n               " +
     "     Correo o Teléfono:\r\n";
 			// 
 			// lblSubtitulo
 			// 
-			this.lblSubtitulo.BackColor = System.Drawing.Color.White;
-			this.lblSubtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblSubtitulo.Location = new System.Drawing.Point(251, 8);
+			this.lblSubtitulo.BackColor = System.Drawing.Color.Transparent;
+			this.lblSubtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblSubtitulo.ForeColor = System.Drawing.Color.Lime;
+			this.lblSubtitulo.Location = new System.Drawing.Point(250, 8);
 			this.lblSubtitulo.Name = "lblSubtitulo";
-			this.lblSubtitulo.Size = new System.Drawing.Size(713, 85);
+			this.lblSubtitulo.Size = new System.Drawing.Size(220, 23);
 			this.lblSubtitulo.TabIndex = 80;
 			this.lblSubtitulo.Text = "Lista de Clientes:";
 			// 
 			// lblTitulo
 			// 
 			this.lblTitulo.AutoSize = true;
-			this.lblTitulo.BackColor = System.Drawing.SystemColors.Control;
-			this.lblTitulo.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTitulo.Location = new System.Drawing.Point(15, 11);
+			this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+			this.lblTitulo.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitulo.ForeColor = System.Drawing.Color.Aqua;
+			this.lblTitulo.Location = new System.Drawing.Point(15, 16);
 			this.lblTitulo.Name = "lblTitulo";
-			this.lblTitulo.Size = new System.Drawing.Size(151, 20);
+			this.lblTitulo.Size = new System.Drawing.Size(188, 23);
 			this.lblTitulo.TabIndex = 79;
 			this.lblTitulo.Text = "Detalle de Clientes";
 			// 
 			// lblTelefono
 			// 
 			this.lblTelefono.AutoSize = true;
-			this.lblTelefono.BackColor = System.Drawing.SystemColors.Control;
-			this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTelefono.Location = new System.Drawing.Point(16, 219);
+			this.lblTelefono.BackColor = System.Drawing.Color.Transparent;
+			this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTelefono.ForeColor = System.Drawing.Color.SpringGreen;
+			this.lblTelefono.Location = new System.Drawing.Point(16, 233);
 			this.lblTelefono.Name = "lblTelefono";
-			this.lblTelefono.Size = new System.Drawing.Size(64, 16);
+			this.lblTelefono.Size = new System.Drawing.Size(84, 20);
 			this.lblTelefono.TabIndex = 78;
 			this.lblTelefono.Text = "Teléfono:";
 			// 
 			// txtCorreoCliente
 			// 
-			this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCorreoCliente.Location = new System.Drawing.Point(19, 180);
+			this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCorreoCliente.Location = new System.Drawing.Point(18, 201);
 			this.txtCorreoCliente.Name = "txtCorreoCliente";
-			this.txtCorreoCliente.Size = new System.Drawing.Size(210, 22);
+			this.txtCorreoCliente.Size = new System.Drawing.Size(219, 29);
 			this.txtCorreoCliente.TabIndex = 77;
 			// 
 			// lblCorreo
 			// 
 			this.lblCorreo.AutoSize = true;
-			this.lblCorreo.BackColor = System.Drawing.SystemColors.Control;
-			this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCorreo.Location = new System.Drawing.Point(16, 159);
+			this.lblCorreo.BackColor = System.Drawing.Color.Transparent;
+			this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCorreo.ForeColor = System.Drawing.Color.SpringGreen;
+			this.lblCorreo.Location = new System.Drawing.Point(17, 178);
 			this.lblCorreo.Name = "lblCorreo";
-			this.lblCorreo.Size = new System.Drawing.Size(51, 16);
+			this.lblCorreo.Size = new System.Drawing.Size(68, 20);
 			this.lblCorreo.TabIndex = 76;
 			this.lblCorreo.Text = "Correo:";
 			// 
 			// txtNombreCompleto
 			// 
-			this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtNombreCompleto.Location = new System.Drawing.Point(19, 122);
+			this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNombreCompleto.Location = new System.Drawing.Point(19, 144);
 			this.txtNombreCompleto.Name = "txtNombreCompleto";
-			this.txtNombreCompleto.Size = new System.Drawing.Size(210, 22);
+			this.txtNombreCompleto.Size = new System.Drawing.Size(219, 29);
 			this.txtNombreCompleto.TabIndex = 75;
 			// 
 			// lblNombreCompleto
 			// 
 			this.lblNombreCompleto.AutoSize = true;
-			this.lblNombreCompleto.BackColor = System.Drawing.SystemColors.Control;
-			this.lblNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblNombreCompleto.Location = new System.Drawing.Point(16, 101);
+			this.lblNombreCompleto.BackColor = System.Drawing.Color.Transparent;
+			this.lblNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblNombreCompleto.ForeColor = System.Drawing.Color.SpringGreen;
+			this.lblNombreCompleto.Location = new System.Drawing.Point(16, 121);
 			this.lblNombreCompleto.Name = "lblNombreCompleto";
-			this.lblNombreCompleto.Size = new System.Drawing.Size(109, 16);
+			this.lblNombreCompleto.Size = new System.Drawing.Size(157, 20);
 			this.lblNombreCompleto.TabIndex = 74;
-			this.lblNombreCompleto.Text = "Nombre Comple:";
+			this.lblNombreCompleto.Text = "Nombre Completo:";
 			// 
 			// txtDocumentoCliente
 			// 
-			this.txtDocumentoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDocumentoCliente.Location = new System.Drawing.Point(19, 64);
+			this.txtDocumentoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDocumentoCliente.Location = new System.Drawing.Point(19, 88);
 			this.txtDocumentoCliente.Name = "txtDocumentoCliente";
-			this.txtDocumentoCliente.Size = new System.Drawing.Size(210, 22);
+			this.txtDocumentoCliente.Size = new System.Drawing.Size(219, 29);
 			this.txtDocumentoCliente.TabIndex = 73;
 			// 
 			// lblDocumento
 			// 
 			this.lblDocumento.AutoSize = true;
-			this.lblDocumento.BackColor = System.Drawing.SystemColors.Control;
-			this.lblDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDocumento.Location = new System.Drawing.Point(16, 43);
+			this.lblDocumento.BackColor = System.Drawing.Color.Transparent;
+			this.lblDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDocumento.ForeColor = System.Drawing.Color.SpringGreen;
+			this.lblDocumento.Location = new System.Drawing.Point(16, 61);
 			this.lblDocumento.Name = "lblDocumento";
-			this.lblDocumento.Size = new System.Drawing.Size(96, 16);
+			this.lblDocumento.Size = new System.Drawing.Size(129, 20);
 			this.lblDocumento.TabIndex = 72;
 			this.lblDocumento.Text = "N° Documento:";
 			// 
@@ -183,22 +192,13 @@
 			this.dgvListaCliente.AllowUserToDeleteRows = false;
 			this.dgvListaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvListaCliente.Location = new System.Drawing.Point(251, 101);
+			this.dgvListaCliente.Location = new System.Drawing.Point(251, 110);
 			this.dgvListaCliente.Name = "dgvListaCliente";
 			this.dgvListaCliente.ReadOnly = true;
+			this.dgvListaCliente.RowTemplate.Height = 28;
 			this.dgvListaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvListaCliente.Size = new System.Drawing.Size(713, 381);
+			this.dgvListaCliente.Size = new System.Drawing.Size(817, 372);
 			this.dgvListaCliente.TabIndex = 71;
-			// 
-			// label1
-			// 
-			this.label1.BackColor = System.Drawing.Color.White;
-			this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.label1.Location = new System.Drawing.Point(0, 0);
-			this.label1.Name = "label1";
-			this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.label1.Size = new System.Drawing.Size(242, 533);
-			this.label1.TabIndex = 70;
 			// 
 			// erpCorreoCliente
 			// 
@@ -220,9 +220,9 @@
 			// 
 			this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnLimpiar.Image = global::CpLicoreria2024.Properties.Resources.limpiar;
-			this.btnLimpiar.Location = new System.Drawing.Point(842, 22);
+			this.btnLimpiar.Location = new System.Drawing.Point(967, 25);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(93, 51);
+			this.btnLimpiar.Size = new System.Drawing.Size(101, 51);
 			this.btnLimpiar.TabIndex = 108;
 			this.btnLimpiar.Text = "Limpiar";
 			this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -233,9 +233,9 @@
 			// 
 			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnBuscar.Image = global::CpLicoreria2024.Properties.Resources.buscar;
-			this.btnBuscar.Location = new System.Drawing.Point(737, 22);
+			this.btnBuscar.Location = new System.Drawing.Point(861, 25);
 			this.btnBuscar.Name = "btnBuscar";
-			this.btnBuscar.Size = new System.Drawing.Size(93, 51);
+			this.btnBuscar.Size = new System.Drawing.Size(100, 51);
 			this.btnBuscar.TabIndex = 107;
 			this.btnBuscar.Text = "Buscar";
 			this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -246,9 +246,9 @@
 			// 
 			this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNuevo.Image = global::CpLicoreria2024.Properties.Resources.Nuevo;
-			this.btnNuevo.Location = new System.Drawing.Point(19, 293);
+			this.btnNuevo.Location = new System.Drawing.Point(12, 317);
 			this.btnNuevo.Name = "btnNuevo";
-			this.btnNuevo.Size = new System.Drawing.Size(93, 51);
+			this.btnNuevo.Size = new System.Drawing.Size(119, 51);
 			this.btnNuevo.TabIndex = 106;
 			this.btnNuevo.Text = "Nuevo";
 			this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -259,7 +259,7 @@
 			// 
 			this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEditar.Image = global::CpLicoreria2024.Properties.Resources.editar;
-			this.btnEditar.Location = new System.Drawing.Point(118, 345);
+			this.btnEditar.Location = new System.Drawing.Point(137, 372);
 			this.btnEditar.Name = "btnEditar";
 			this.btnEditar.Size = new System.Drawing.Size(93, 51);
 			this.btnEditar.TabIndex = 105;
@@ -272,9 +272,9 @@
 			// 
 			this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEliminar.Image = global::CpLicoreria2024.Properties.Resources.eliminar;
-			this.btnEliminar.Location = new System.Drawing.Point(19, 409);
+			this.btnEliminar.Location = new System.Drawing.Point(12, 431);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(93, 51);
+			this.btnEliminar.Size = new System.Drawing.Size(119, 51);
 			this.btnEliminar.TabIndex = 104;
 			this.btnEliminar.Text = "Eliminar";
 			this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -285,7 +285,7 @@
 			// 
 			this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCerrar.Image = global::CpLicoreria2024.Properties.Resources.cerrar;
-			this.btnCerrar.Location = new System.Drawing.Point(117, 407);
+			this.btnCerrar.Location = new System.Drawing.Point(138, 432);
 			this.btnCerrar.Name = "btnCerrar";
 			this.btnCerrar.Size = new System.Drawing.Size(93, 51);
 			this.btnCerrar.TabIndex = 103;
@@ -298,9 +298,9 @@
 			// 
 			this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnGuardar.Image = global::CpLicoreria2024.Properties.Resources.Guardar;
-			this.btnGuardar.Location = new System.Drawing.Point(19, 350);
+			this.btnGuardar.Location = new System.Drawing.Point(12, 374);
 			this.btnGuardar.Name = "btnGuardar";
-			this.btnGuardar.Size = new System.Drawing.Size(93, 51);
+			this.btnGuardar.Size = new System.Drawing.Size(119, 51);
 			this.btnGuardar.TabIndex = 102;
 			this.btnGuardar.Text = "Guardar";
 			this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -312,7 +312,8 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.Chocolate;
-			this.ClientSize = new System.Drawing.Size(976, 501);
+			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x6661;
+			this.ClientSize = new System.Drawing.Size(1080, 501);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnBuscar);
 			this.Controls.Add(this.btnNuevo);
@@ -333,7 +334,10 @@
 			this.Controls.Add(this.txtDocumentoCliente);
 			this.Controls.Add(this.lblDocumento);
 			this.Controls.Add(this.dgvListaCliente);
-			this.Controls.Add(this.label1);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
 			this.Name = "FrmCliente";
 			this.Text = "::: Licoreria - Cliente :::";
 			this.Load += new System.EventHandler(this.FrmCliente_Load);
@@ -361,7 +365,6 @@
         private System.Windows.Forms.TextBox txtDocumentoCliente;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.DataGridView dgvListaCliente;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider erpCorreoCliente;
         private System.Windows.Forms.ErrorProvider erpNombreCompleto;
         private System.Windows.Forms.ErrorProvider erpDocumentoCliente;
