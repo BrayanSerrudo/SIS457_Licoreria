@@ -398,6 +398,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x666;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1141, 657);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnBuscar);
@@ -427,8 +428,11 @@
 			this.Controls.Add(this.lblDocumento);
 			this.Controls.Add(this.dgvListaEmpleado);
 			this.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
 			this.Name = "FrmEmpleado";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "::: Licoreria - Empleado :::";
 			this.Load += new System.EventHandler(this.FrmEmpleado_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleado)).EndInit();

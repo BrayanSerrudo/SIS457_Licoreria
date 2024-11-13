@@ -183,7 +183,7 @@
 			this.txtRazonSocial.Location = new System.Drawing.Point(214, 56);
 			this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtRazonSocial.Name = "txtRazonSocial";
-			this.txtRazonSocial.Size = new System.Drawing.Size(154, 29);
+			this.txtRazonSocial.Size = new System.Drawing.Size(304, 29);
 			this.txtRazonSocial.TabIndex = 7;
 			// 
 			// txtDocuProveedor
@@ -301,8 +301,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x666;
-			this.ClientSize = new System.Drawing.Size(587, 701);
+			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x6661;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(587, 683);
 			this.Controls.Add(this.btnLimpiarNFactura);
 			this.Controls.Add(this.btnBuscarNFactura);
 			this.Controls.Add(this.btnDescargarPdf);
@@ -320,6 +321,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.MaximizeBox = false;
 			this.Name = "FrmDetalleCompra";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "::: Licoreria - DetalleCompra :::";
 			this.Load += new System.EventHandler(this.FrmDetalleCompra_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();

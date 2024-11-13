@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace ClnLicoreria2024
 {
@@ -64,13 +65,16 @@ namespace ClnLicoreria2024
 
         public static Empleado obtenerUno(int id)
         {
-            using (var context = new Labsis457licoreriaEntities2())
-            {
-                var empleado = context.Empleado.Find(id);
-                empleado.Usuario = context.Usuario.Where(x => x.idEmpleado == id).ToList();
-                return empleado;
-            }
-        }
+			using (var context = new Labsis457licoreriaEntities2())
+			{
+				
+				var empleado = context.Empleado
+									  .Include(e => e.Usuario)  
+									  .FirstOrDefault(e => e.id == id);  // Obtener el empleado por su ID
+
+				return empleado;
+			}
+		}
 
         public static List<Empleado> listar()
         {
@@ -88,6 +92,14 @@ namespace ClnLicoreria2024
             }
         }
 
-     
-    }
+		public static bool ExisteCedulaIdentidad(string cedulaIdentidad)
+		{
+			using (var context = new Labsis457licoreriaEntities2())
+			{
+				return context.Empleado.Any(e => e.cedulaIdentidad.Equals(cedulaIdentidad, StringComparison.OrdinalIgnoreCase) && e.estado != -1);
+			}
+		}
+
+
+	}
 }

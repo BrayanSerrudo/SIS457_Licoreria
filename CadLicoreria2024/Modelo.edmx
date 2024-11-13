@@ -239,7 +239,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="ObtenerDetallesCompras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ObtenerDetallesCompras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha" Type="date" Mode="In" />
+        </Function>
         <Function Name="ObtenerProductosConCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
@@ -632,7 +634,8 @@
           <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="ObtenerDetallesCompras" ReturnType="Collection(Labsis457licoreriaModel.ObtenerDetallesCompras_Result)">
-            </FunctionImport>
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="ObtenerProductosConCategoria_Result">
           <Property Type="Int32" Name="id" Nullable="false" />

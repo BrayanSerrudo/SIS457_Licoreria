@@ -14,24 +14,32 @@ namespace CpLicoreria2024
     public partial class FrmPrincipal : Form
     {
         private FrmLogin frmLogin;
-        public FrmPrincipal(FrmLogin frmLogin )
+        public FrmPrincipal(FrmLogin frmLogin)
         {
             InitializeComponent();
             this.frmLogin = frmLogin;
-            // experimentando funciono se puso el nombre del logiado a un extremo de la pagina principal
+            // comprobar si hay usuario logueado
             if (Util.usuario != null)
             {
-                lblUsuario.Text = "" + Util.usuario.usuario1;
-
-                // Deshabilitar opciones de menú si el usuario no es "GroverA"
-                if (Util.usuario.usuario1 != "GroverA")
+				// Obtener el empleado asociado con el usuario
+				lblUsuario.Text = "" + Util.usuario.usuario1;
+                using (var context = new Labsis457licoreriaEntities2())
                 {
-                    menuUsuario.Enabled = false;  // Deshabilitar menú de proveedores
-                  
+                    var empleado = context.Empleado
+                                          .FirstOrDefault(e => e.id == Util.usuario.idEmpleado);  // Obtenemos el empleado con el id del usuario
+
+					// Verificamos si el empleado existe y tiene el cargo "propietario"
+					if (empleado != null && empleado.cargo != "Propietario")
+                    {
+                        menuUsuario.Enabled = false;  // Deshabilitar menú si no es "propietario"
+
+                    }
                 }
             }
-        }
-
+			this.frmLogin = frmLogin;
+			// Agregar el manejador del evento FormClosing
+			this.FormClosing += FrmPrincipal_FormClosing;
+		}
         ///experimento cargar formulario a panel funciona
 
 
@@ -57,8 +65,20 @@ namespace CpLicoreria2024
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmLogin.Visible = true;
-        }
+			var result = MessageBox.Show("¿Estás seguro de que quieres cerrar la aplicación?", "Confirmación", MessageBoxButtons.YesNo);
+
+			if (result == DialogResult.Yes)
+			{
+				// Si el usuario confirma que quiere salir, se cierra la aplicación
+				Application.Exit();
+			}
+			else
+			{
+				// Si el usuario no quiere salir, se cancela el cierre del formulario
+				e.Cancel = true;
+			}
+
+		}
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -103,5 +123,7 @@ namespace CpLicoreria2024
 		{
             new FrmRegistroCompras().ShowDialog();  
 		}
+
+
 	}
 }

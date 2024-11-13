@@ -148,9 +148,13 @@ namespace CadLicoreria2024
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoPequeListar_Result>("paProductoPequeListar", parametroParameter);
         }
     
-        public virtual ObjectResult<ObtenerDetallesCompras_Result> ObtenerDetallesCompras()
+        public virtual ObjectResult<ObtenerDetallesCompras_Result> ObtenerDetallesCompras(Nullable<System.DateTime> fecha)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ObtenerDetallesCompras_Result>("ObtenerDetallesCompras");
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ObtenerDetallesCompras_Result>("ObtenerDetallesCompras", fechaParameter);
         }
     }
 }

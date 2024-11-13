@@ -30,25 +30,14 @@ namespace CpLicoreria2024
 
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["documento"];
         }
-        private void FrmPequeProveedor_Load(object sender, EventArgs e)
-        {
-            listar();
-        }
 
-        private void iBtnBuscar_Click(object sender, EventArgs e)
-        {
-            listar();
-        }
+    
 
         private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter) listar();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
         private void limpiar()
         {
             txtParametro.Text = string.Empty;
@@ -70,5 +59,21 @@ namespace CpLicoreria2024
                 this.Close();
             }
         }
-    }
+
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
+			listar();
+		}
+
+		private void btnLimpiar_Click(object sender, EventArgs e)
+		{
+			limpiar();
+		}
+
+		private void FrmPequeProveedor_Load(object sender, EventArgs e)
+		{
+			dgvLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+			listar();
+		}
+	}
 }

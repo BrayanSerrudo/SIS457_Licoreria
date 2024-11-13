@@ -16,7 +16,9 @@ namespace CpLicoreria2024
         public FrmLogin()
         {
             InitializeComponent();
-        }
+            this.Size = new Size(422, 223);
+
+		}
 
         private void btnSalir_Click(object sender, EventArgs e)
         {

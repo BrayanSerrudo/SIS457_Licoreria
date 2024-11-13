@@ -37,19 +37,9 @@ namespace CpLicoreria2024
 
         private void FrmPequeProducto_Load(object sender, EventArgs e)
         {
-            listar();
+			dgvLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+			listar();
         }
-
-        private void iBtnBuscar_Click(object sender, EventArgs e)
-        {
-            listar();
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
-
         private void limpiar()
         {
             txtParametropequeño.Text = string.Empty;
@@ -77,5 +67,20 @@ namespace CpLicoreria2024
         {
             if (e.KeyChar == (char)Keys.Enter) listar();
         }
-    }
+
+		private void lblBusqueda_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
+			listar();
+		}
+
+		private void btnLimpiar_Click(object sender, EventArgs e)
+		{
+			limpiar();
+		}
+	}
 }

@@ -311,7 +311,9 @@
     <FunctionImport Name="paProductoPequeListar" ReturnType="Collection(Labsis457licoreriaModel.paProductoPequeListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="ObtenerDetallesCompras" ReturnType="Collection(Labsis457licoreriaModel.ObtenerDetallesCompras_Result)" />
+    <FunctionImport Name="ObtenerDetallesCompras" ReturnType="Collection(Labsis457licoreriaModel.ObtenerDetallesCompras_Result)">
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="ObtenerProductosConCategoria_Result">
     <Property Type="Int32" Name="id" Nullable="false" />

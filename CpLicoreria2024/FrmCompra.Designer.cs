@@ -39,6 +39,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.lblFecha = new System.Windows.Forms.Label();
 			this.gbxInfoProducto = new System.Windows.Forms.GroupBox();
+			this.btnBuscarProducto = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
 			this.nudCantidad = new System.Windows.Forms.NumericUpDown();
 			this.lblPrecioVenta = new System.Windows.Forms.Label();
@@ -66,11 +67,10 @@
 			this.lblRazonSocial = new System.Windows.Forms.Label();
 			this.txtIdProveedor = new System.Windows.Forms.TextBox();
 			this.gbxInformacionProveedor = new System.Windows.Forms.GroupBox();
+			this.btnBuscarProveedor = new System.Windows.Forms.Button();
 			this.iBtnQuitar = new FontAwesome.Sharp.IconButton();
 			this.iBtnRegistrar = new FontAwesome.Sharp.IconButton();
 			this.ibtnAgregar = new FontAwesome.Sharp.IconButton();
-			this.btnBuscarProducto = new System.Windows.Forms.Button();
-			this.btnBuscarProveedor = new System.Windows.Forms.Button();
 			this.gbxInfoCompra.SuspendLayout();
 			this.gbxInfoProducto.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
@@ -88,7 +88,9 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.Lime;
 			this.label2.Location = new System.Drawing.Point(11, 18);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(156, 24);
@@ -97,12 +99,14 @@
 			// 
 			// gbxInfoCompra
 			// 
+			this.gbxInfoCompra.BackColor = System.Drawing.Color.Transparent;
 			this.gbxInfoCompra.Controls.Add(this.txtNfactura);
 			this.gbxInfoCompra.Controls.Add(this.label6);
 			this.gbxInfoCompra.Controls.Add(this.cbxTipoDocumento);
 			this.gbxInfoCompra.Controls.Add(this.txtFecha);
 			this.gbxInfoCompra.Controls.Add(this.label3);
 			this.gbxInfoCompra.Controls.Add(this.lblFecha);
+			this.gbxInfoCompra.ForeColor = System.Drawing.Color.Aqua;
 			this.gbxInfoCompra.Location = new System.Drawing.Point(15, 45);
 			this.gbxInfoCompra.Name = "gbxInfoCompra";
 			this.gbxInfoCompra.Size = new System.Drawing.Size(382, 93);
@@ -167,6 +171,7 @@
 			// 
 			// gbxInfoProducto
 			// 
+			this.gbxInfoProducto.BackColor = System.Drawing.Color.Transparent;
 			this.gbxInfoProducto.Controls.Add(this.btnBuscarProducto);
 			this.gbxInfoProducto.Controls.Add(this.label5);
 			this.gbxInfoProducto.Controls.Add(this.nudCantidad);
@@ -179,12 +184,28 @@
 			this.gbxInfoProducto.Controls.Add(this.txtIdProducto);
 			this.gbxInfoProducto.Controls.Add(this.lblCodigoProducto);
 			this.gbxInfoProducto.Controls.Add(this.txtCodigoProducto);
+			this.gbxInfoProducto.ForeColor = System.Drawing.Color.Fuchsia;
 			this.gbxInfoProducto.Location = new System.Drawing.Point(15, 152);
 			this.gbxInfoProducto.Name = "gbxInfoProducto";
 			this.gbxInfoProducto.Size = new System.Drawing.Size(772, 108);
 			this.gbxInfoProducto.TabIndex = 5;
 			this.gbxInfoProducto.TabStop = false;
 			this.gbxInfoProducto.Text = "Información de Producto";
+			// 
+			// btnBuscarProducto
+			// 
+			this.btnBuscarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnBuscarProducto.ForeColor = System.Drawing.Color.Black;
+			this.btnBuscarProducto.Image = global::CpLicoreria2024.Properties.Resources.find_search_locate_95724;
+			this.btnBuscarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnBuscarProducto.Location = new System.Drawing.Point(6, 35);
+			this.btnBuscarProducto.Name = "btnBuscarProducto";
+			this.btnBuscarProducto.Size = new System.Drawing.Size(122, 59);
+			this.btnBuscarProducto.TabIndex = 18;
+			this.btnBuscarProducto.Text = "Buscar:";
+			this.btnBuscarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBuscarProducto.UseVisualStyleBackColor = true;
+			this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
 			// 
 			// label5
 			// 
@@ -245,7 +266,8 @@
 			// lblProducto
 			// 
 			this.lblProducto.AutoSize = true;
-			this.lblProducto.Location = new System.Drawing.Point(225, 42);
+			this.lblProducto.ForeColor = System.Drawing.Color.Magenta;
+			this.lblProducto.Location = new System.Drawing.Point(226, 42);
 			this.lblProducto.Name = "lblProducto";
 			this.lblProducto.Size = new System.Drawing.Size(77, 20);
 			this.lblProducto.TabIndex = 10;
@@ -264,12 +286,13 @@
 			this.txtIdProducto.Enabled = false;
 			this.txtIdProducto.Location = new System.Drawing.Point(394, 35);
 			this.txtIdProducto.Name = "txtIdProducto";
-			this.txtIdProducto.Size = new System.Drawing.Size(3, 17);
+			this.txtIdProducto.Size = new System.Drawing.Size(40, 26);
 			this.txtIdProducto.TabIndex = 10;
 			// 
 			// lblCodigoProducto
 			// 
 			this.lblCodigoProducto.AutoSize = true;
+			this.lblCodigoProducto.ForeColor = System.Drawing.Color.Magenta;
 			this.lblCodigoProducto.Location = new System.Drawing.Point(135, 41);
 			this.lblCodigoProducto.Name = "lblCodigoProducto";
 			this.lblCodigoProducto.Size = new System.Drawing.Size(63, 20);
@@ -296,6 +319,8 @@
 			// lblTotalPagar
 			// 
 			this.lblTotalPagar.AutoSize = true;
+			this.lblTotalPagar.BackColor = System.Drawing.Color.Transparent;
+			this.lblTotalPagar.ForeColor = System.Drawing.Color.Fuchsia;
 			this.lblTotalPagar.Location = new System.Drawing.Point(799, 310);
 			this.lblTotalPagar.Name = "lblTotalPagar";
 			this.lblTotalPagar.Size = new System.Drawing.Size(107, 20);
@@ -347,32 +372,32 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(128, 27);
+			this.label4.Location = new System.Drawing.Point(129, 27);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(160, 20);
+			this.label4.Size = new System.Drawing.Size(116, 20);
 			this.label4.TabIndex = 4;
-			this.label4.Text = "Número Documento::";
+			this.label4.Text = "N° Documento:";
 			// 
 			// txtDocuProveedor
 			// 
 			this.txtDocuProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtDocuProveedor.Location = new System.Drawing.Point(130, 52);
 			this.txtDocuProveedor.Name = "txtDocuProveedor";
-			this.txtDocuProveedor.Size = new System.Drawing.Size(136, 29);
+			this.txtDocuProveedor.Size = new System.Drawing.Size(112, 29);
 			this.txtDocuProveedor.TabIndex = 5;
 			// 
 			// txtRazonSocial
 			// 
 			this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtRazonSocial.Location = new System.Drawing.Point(300, 51);
+			this.txtRazonSocial.Location = new System.Drawing.Point(268, 51);
 			this.txtRazonSocial.Name = "txtRazonSocial";
-			this.txtRazonSocial.Size = new System.Drawing.Size(199, 29);
+			this.txtRazonSocial.Size = new System.Drawing.Size(229, 29);
 			this.txtRazonSocial.TabIndex = 7;
 			// 
 			// lblRazonSocial
 			// 
 			this.lblRazonSocial.AutoSize = true;
-			this.lblRazonSocial.Location = new System.Drawing.Point(293, 26);
+			this.lblRazonSocial.Location = new System.Drawing.Point(265, 26);
 			this.lblRazonSocial.Name = "lblRazonSocial";
 			this.lblRazonSocial.Size = new System.Drawing.Size(107, 20);
 			this.lblRazonSocial.TabIndex = 8;
@@ -381,25 +406,42 @@
 			// txtIdProveedor
 			// 
 			this.txtIdProveedor.Enabled = false;
-			this.txtIdProveedor.Location = new System.Drawing.Point(431, 15);
+			this.txtIdProveedor.Location = new System.Drawing.Point(459, 16);
 			this.txtIdProveedor.Name = "txtIdProveedor";
-			this.txtIdProveedor.Size = new System.Drawing.Size(1, 17);
+			this.txtIdProveedor.Size = new System.Drawing.Size(38, 26);
 			this.txtIdProveedor.TabIndex = 9;
 			// 
 			// gbxInformacionProveedor
 			// 
+			this.gbxInformacionProveedor.BackColor = System.Drawing.Color.Transparent;
 			this.gbxInformacionProveedor.Controls.Add(this.btnBuscarProveedor);
 			this.gbxInformacionProveedor.Controls.Add(this.txtIdProveedor);
 			this.gbxInformacionProveedor.Controls.Add(this.lblRazonSocial);
 			this.gbxInformacionProveedor.Controls.Add(this.txtRazonSocial);
 			this.gbxInformacionProveedor.Controls.Add(this.txtDocuProveedor);
 			this.gbxInformacionProveedor.Controls.Add(this.label4);
+			this.gbxInformacionProveedor.ForeColor = System.Drawing.Color.Lime;
 			this.gbxInformacionProveedor.Location = new System.Drawing.Point(409, 45);
 			this.gbxInformacionProveedor.Name = "gbxInformacionProveedor";
 			this.gbxInformacionProveedor.Size = new System.Drawing.Size(505, 93);
 			this.gbxInformacionProveedor.TabIndex = 4;
 			this.gbxInformacionProveedor.TabStop = false;
 			this.gbxInformacionProveedor.Text = "Información Proveedor";
+			// 
+			// btnBuscarProveedor
+			// 
+			this.btnBuscarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnBuscarProveedor.ForeColor = System.Drawing.Color.Black;
+			this.btnBuscarProveedor.Image = global::CpLicoreria2024.Properties.Resources.find_search_locate_95725;
+			this.btnBuscarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnBuscarProveedor.Location = new System.Drawing.Point(6, 26);
+			this.btnBuscarProveedor.Name = "btnBuscarProveedor";
+			this.btnBuscarProveedor.Size = new System.Drawing.Size(117, 60);
+			this.btnBuscarProveedor.TabIndex = 17;
+			this.btnBuscarProveedor.Text = "Buscar:";
+			this.btnBuscarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+			this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
 			// 
 			// iBtnQuitar
 			// 
@@ -444,39 +486,13 @@
 			this.ibtnAgregar.UseVisualStyleBackColor = true;
 			this.ibtnAgregar.Click += new System.EventHandler(this.ibtnAgregar_Click);
 			// 
-			// btnBuscarProducto
-			// 
-			this.btnBuscarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnBuscarProducto.Image = global::CpLicoreria2024.Properties.Resources.find_search_locate_95724;
-			this.btnBuscarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnBuscarProducto.Location = new System.Drawing.Point(6, 35);
-			this.btnBuscarProducto.Name = "btnBuscarProducto";
-			this.btnBuscarProducto.Size = new System.Drawing.Size(122, 59);
-			this.btnBuscarProducto.TabIndex = 18;
-			this.btnBuscarProducto.Text = "Buscar:";
-			this.btnBuscarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnBuscarProducto.UseVisualStyleBackColor = true;
-			this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
-			// 
-			// btnBuscarProveedor
-			// 
-			this.btnBuscarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnBuscarProveedor.Image = global::CpLicoreria2024.Properties.Resources.find_search_locate_95725;
-			this.btnBuscarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnBuscarProveedor.Location = new System.Drawing.Point(6, 26);
-			this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-			this.btnBuscarProveedor.Size = new System.Drawing.Size(117, 60);
-			this.btnBuscarProveedor.TabIndex = 17;
-			this.btnBuscarProveedor.Text = "Buscar:";
-			this.btnBuscarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnBuscarProveedor.UseVisualStyleBackColor = true;
-			this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
-			// 
 			// FrmCompra
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.Color.Black;
+			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x6661;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(926, 435);
 			this.Controls.Add(this.iBtnQuitar);
 			this.Controls.Add(this.dgvCompras);
@@ -489,8 +505,11 @@
 			this.Controls.Add(this.gbxInfoCompra);
 			this.Controls.Add(this.label2);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
 			this.Name = "FrmCompra";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "::: Licoreria - Compra :::";
 			this.Load += new System.EventHandler(this.FrmCompra_Load);
 			this.gbxInfoCompra.ResumeLayout(false);

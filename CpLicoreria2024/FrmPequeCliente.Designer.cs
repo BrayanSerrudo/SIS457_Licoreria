@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPequeCliente));
 			this.cbxBusqueda = new System.Windows.Forms.ComboBox();
 			this.txtParametropequeño = new System.Windows.Forms.TextBox();
 			this.lblBusqueda = new System.Windows.Forms.Label();
@@ -135,8 +136,8 @@
 			// 
 			// FrmPequeCliente
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(507, 428);
 			this.Controls.Add(this.ibtnclear);
 			this.Controls.Add(this.iBtnBuscar);
@@ -145,8 +146,9 @@
 			this.Controls.Add(this.lblBusqueda);
 			this.Controls.Add(this.lblSubtitulo);
 			this.Controls.Add(this.dgvLista);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FrmPequeCliente";
-			this.Text = "FrmPequeCliente";
+			this.Text = "::: icoreria - PequeCliente :::";
 			this.Load += new System.EventHandler(this.FrmPequeCliente_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
 			this.ResumeLayout(false);

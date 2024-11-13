@@ -30,7 +30,6 @@ namespace CpLicoreria2024
 			dgvDetalles.Columns.Add("total", "Total");
 
 			dgvDetalles.Columns["idProducto"].Visible = false;
-			dgvDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 		}
 
 
@@ -175,6 +174,7 @@ namespace CpLicoreria2024
 			txtNFacturaBoleta.KeyPress += Util.onlyNumbers;
 			DesactivarCampos();
 			dgvDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dgvDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 		}
 
 		private void btnLimpiarNFactura_Click(object sender, EventArgs e)
@@ -197,6 +197,7 @@ namespace CpLicoreria2024
 			txtDocuProveedor.Text = string.Empty;
 			txtRazonSocial.Text = string.Empty;
 		}
+
 	} 
 	
 }

@@ -313,6 +313,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.Chocolate;
 			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x6661;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1080, 501);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnBuscar);
@@ -339,6 +340,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.Name = "FrmCliente";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "::: Licoreria - Cliente :::";
 			this.Load += new System.EventHandler(this.FrmCliente_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvListaCliente)).EndInit();

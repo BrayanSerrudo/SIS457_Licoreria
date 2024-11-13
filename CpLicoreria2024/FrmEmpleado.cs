@@ -50,6 +50,7 @@ namespace CpLicoreria2024
             txtPrimerApellido.KeyPress += Util.onlyLetters;
             txtSegundoApellido.KeyPress += Util.onlyLetters;
             txtCelular.KeyPress += Util.onlyNumbers;
+			DesactivarCampos();
             listar();
         }
     
@@ -122,6 +123,7 @@ namespace CpLicoreria2024
 		{
 			esNuevo = true;
 			txtCedulaIdentidad.Focus(); //para que el puntero parpadee en el texto de documento al presionar btnNuevo
+			HabilitarCampos();
 			limpiar();
 		}
 
@@ -141,6 +143,13 @@ namespace CpLicoreria2024
 
 				if (esNuevo)
 				{
+					if (EmpleadoCln.ExisteCedulaIdentidad(empleado.cedulaIdentidad))
+					{
+						MessageBox.Show("NO SE PUEDE AGREGAR, la cedula de identidad ya existente.", ":::Licoreria - Mensaje :::",
+				  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						return;
+					}
+
 					Usuario usuario = null;
 					if (!string.IsNullOrEmpty(txtUsuario.Text))
 					{
@@ -156,12 +165,21 @@ namespace CpLicoreria2024
 				{
 					int index = dgvListaEmpleado.CurrentCell.RowIndex;
 					empleado.id = Convert.ToInt32(dgvListaEmpleado.Rows[index].Cells["id"].Value);
+					var empleadoExistente = EmpleadoCln.obtenerUno(empleado.id);
+					if (empleado.cedulaIdentidad != empleadoExistente.cedulaIdentidad && EmpleadoCln.ExisteCedulaIdentidad(empleado.cedulaIdentidad))
+					{
+						MessageBox.Show("NO SE PUEDE ACTUALIZAR, la cédula de identidad ya existente.", ":::Licoreria - Mensaje :::",
+							MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						return; // Salir del método si la descripción ya existe
+					}
 					EmpleadoCln.actualizar(empleado);
 				}
 				listar();
 				MessageBox.Show("Empleado guardado correctamente", ":::Licoreria - Mensaje :::",
 					MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
+			limpiar();
+			DesactivarCampos();
 		}
 
 		private void btnEliminar_Click(object sender, EventArgs e)
@@ -196,6 +214,7 @@ namespace CpLicoreria2024
 			cbxCargo.Text = empleado.cargo;
 			txtUsuario.Text = empleado.Usuario.Count() > 0 ? empleado.Usuario.First().usuario1 : "";
 			txtCedulaIdentidad.Focus();
+			HabilitarCampos();
 		}
 
 		private void btnCerrar_Click(object sender, EventArgs e)
@@ -213,5 +232,29 @@ namespace CpLicoreria2024
 
 			limpiarlista();
 		}
+
+		private void DesactivarCampos()
+		{
+			txtCedulaIdentidad.Enabled = false;
+			txtNombres.Enabled = false;
+			txtPrimerApellido.Enabled = false;
+			txtSegundoApellido.Enabled = false;
+			txtDireccion.Enabled = false;
+			txtCelular.Enabled = false;
+			txtUsuario.Enabled = false;
+			cbxCargo.Enabled = false;
+		}
+		private void HabilitarCampos()
+		{
+			txtCedulaIdentidad.Enabled = true;
+			txtNombres.Enabled = true;
+			txtPrimerApellido.Enabled = true;
+			txtSegundoApellido.Enabled = true;
+			txtDireccion.Enabled = true;
+			txtCelular.Enabled = true;
+			txtUsuario.Enabled = true;
+			cbxCargo.Enabled = true;
+		}
+
 	}
 }

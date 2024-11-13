@@ -52,7 +52,7 @@
 			// txtParametroCategoria
 			// 
 			this.txtParametroCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtParametroCategoria.Location = new System.Drawing.Point(472, 46);
+			this.txtParametroCategoria.Location = new System.Drawing.Point(384, 47);
 			this.txtParametroCategoria.Margin = new System.Windows.Forms.Padding(4);
 			this.txtParametroCategoria.Name = "txtParametroCategoria";
 			this.txtParametroCategoria.Size = new System.Drawing.Size(241, 29);
@@ -64,12 +64,12 @@
 			this.lblBusqueda.BackColor = System.Drawing.Color.Transparent;
 			this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblBusqueda.ForeColor = System.Drawing.Color.Lime;
-			this.lblBusqueda.Location = new System.Drawing.Point(266, 50);
+			this.lblBusqueda.Location = new System.Drawing.Point(262, 40);
 			this.lblBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblBusqueda.Name = "lblBusqueda";
-			this.lblBusqueda.Size = new System.Drawing.Size(216, 25);
+			this.lblBusqueda.Size = new System.Drawing.Size(216, 49);
 			this.lblBusqueda.TabIndex = 104;
-			this.lblBusqueda.Text = "Buscar por Descripción :";
+			this.lblBusqueda.Text = "Buscar por\r\n Descripción :";
 			// 
 			// lblTitulo
 			// 
@@ -111,7 +111,7 @@
 			this.dgvListaCategoria.AllowUserToDeleteRows = false;
 			this.dgvListaCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvListaCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvListaCategoria.Location = new System.Drawing.Point(266, 93);
+			this.dgvListaCategoria.Location = new System.Drawing.Point(313, 94);
 			this.dgvListaCategoria.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvListaCategoria.Name = "dgvListaCategoria";
 			this.dgvListaCategoria.ReadOnly = true;
@@ -128,7 +128,7 @@
 			// 
 			this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnLimpiar.Image = global::CpLicoreria2024.Properties.Resources.limpiar;
-			this.btnLimpiar.Location = new System.Drawing.Point(825, 25);
+			this.btnLimpiar.Location = new System.Drawing.Point(737, 25);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(101, 51);
 			this.btnLimpiar.TabIndex = 120;
@@ -141,7 +141,7 @@
 			// 
 			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnBuscar.Image = global::CpLicoreria2024.Properties.Resources.buscar;
-			this.btnBuscar.Location = new System.Drawing.Point(720, 25);
+			this.btnBuscar.Location = new System.Drawing.Point(632, 25);
 			this.btnBuscar.Name = "btnBuscar";
 			this.btnBuscar.Size = new System.Drawing.Size(99, 51);
 			this.btnBuscar.TabIndex = 119;
@@ -234,7 +234,8 @@
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.Color.SeaGreen;
 			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x666;
-			this.ClientSize = new System.Drawing.Size(967, 399);
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(844, 399);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnBuscar);
 			this.Controls.Add(this.btnNuevo);
@@ -255,6 +256,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "FrmCategoria";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "::: Licoreria - Categoria :::";
 			this.Load += new System.EventHandler(this.FrmCategoria_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvListaCategoria)).EndInit();

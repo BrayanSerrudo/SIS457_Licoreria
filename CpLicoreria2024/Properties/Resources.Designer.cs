@@ -63,6 +63,26 @@ namespace CpLicoreria2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap borrar {
+            get {
+                object obj = ResourceManager.GetObject("borrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap borrar_1_ {
+            get {
+                object obj = ResourceManager.GetObject("borrar(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap broom {
             get {
                 object obj = ResourceManager.GetObject("broom", resourceCulture);
@@ -266,6 +286,16 @@ namespace CpLicoreria2024.Properties {
         internal static System.Drawing.Bitmap IMG_20200325_WA0003 {
             get {
                 object obj = ResourceManager.GetObject("IMG-20200325-WA0003", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1246263673_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1246263673-612x612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

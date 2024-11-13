@@ -136,19 +136,9 @@ CREATE TABLE DetalleVenta (
 ); 
 
 
-
-
 ALTER TABLE DetalleNegocio ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE DetalleNegocio ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE DetalleNegocio ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
-
-select* from Detallecompra;
-INSERT INTO DetalleCompra(idCompra, idProducto,precioCompra,precioVenta,cantidad,total)
-VALUES (5,2,2,2,4,10);
-ALTER TABLE Compra
-DROP COLUMN numeroFactura;
-select * from Compra;
-
 
 ALTER TABLE DetalleVenta ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE DetalleVenta ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -275,10 +265,7 @@ GO
   --producto
 
   SELECT*FROM Producto
-  INSERT INTO Producto(codigo,idCategoria, nombre, descripcion, stock, precioCompra, precioVenta)
-  VALUES('COD',2, 'leche LA LECHERA','Producto argentino',10, 50,56),
-  ('COA',1, 'MONO','BOLIVIA',23, 50,5),
-  ('COW',3, 'OSO','CHILE',9, 51,45);
+
   GO
   ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
@@ -355,9 +342,6 @@ GO
 
 
 
-
-
-
 -- Formulario pequeño de Producto para compra      FUNCIONA NO TOCARRRRR
   ALTER PROC paProductoPequenoListar @parametro VARCHAR(100)    
   AS BEGIN SELECT
@@ -392,18 +376,8 @@ go
 GO
 EXEC paClientePequenoListar 'cristhian'
 go
-select * from Cliente;
 
 
-select* from Compra
-select*from Venta
-select*from DetalleVenta
-
-
-
-
-
-select * from usuario;
 --compra
 
 select * from DetalleCompra;
@@ -420,19 +394,10 @@ DROP Column idUsuario;
 ALTER TABLE Venta
 DROP CONSTRAINT fk_Venta_Usuario;
 
-
-
-select * from DetalleNegocio
-INSERT INTO DetalleNegocio(nombre, direccion, nit)
-VALUES ('licoreria pedro', 'lupe', 'dsdsdasd' );
-TRUNCATE TABLE DetalleNegocio;
-
-select * from Categoria;
 GO
-
-
+-- procedimiento almacenado para mostrar los datos de DetallesCompras
 ALTER PROCEDURE ObtenerDetallesCompras
-
+    @Fecha DATE = NULL 
 AS
 BEGIN
     SELECT 
@@ -460,6 +425,8 @@ BEGIN
         Producto pr ON d.idProducto = pr.id
     JOIN
         Categoria ca ON pr.idCategoria = ca.id
+    WHERE
+    (@Fecha IS NULL OR CAST(c.fechaRegistro AS DATE) = @Fecha)
 
 END
 exec ObtenerDetallesCompras;
@@ -478,4 +445,9 @@ DBCC CHECKIDENT ('Categoria', RESEED, 0);
 DBCC CHECKIDENT ('DetalleVenta', RESEED, 0);
 DBCC CHECKIDENT ('Venta', RESEED, 0);
 
+-- Detalle de  Negocio (Informacion )
+select * from DetalleNegocio;
+INSERT INTO DetalleNegocio(nombre, direccion, nit)
+VALUES ('Licoreria "FUEGO"', 'Av. Marcelo Quiroga de Santa Cruz s/n.', '123456789012' );
 
+select*from Empleado;
