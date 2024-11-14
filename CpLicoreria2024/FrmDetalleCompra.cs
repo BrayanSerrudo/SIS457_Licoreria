@@ -124,7 +124,7 @@ namespace CpLicoreria2024
 			Document doc = new Document();
 
 			// Especificar la ruta del archivo PDF
-			string ruta = "DetallesCompra.pdf";
+			string ruta = "DetallesCompra_Formulario.pdf";
 
 			try
 			{
@@ -134,7 +134,19 @@ namespace CpLicoreria2024
 
 				// Agregar un título
 				doc.Add(new Paragraph("Detalles de Compra"));
-				doc.Add(new Paragraph(DateTime.Now.ToString()));
+				doc.Add(new Paragraph("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy")));
+
+				// Agregar la información de los TextBox y Label
+				doc.Add(new Paragraph("Número de Factura: " + txtNFacturaBoleta.Text));
+				doc.Add(new Paragraph("Tipo de Documento: " + txtTipoDocumento.Text));
+				doc.Add(new Paragraph("Usuario: " + txtUsuario.Text));
+				doc.Add(new Paragraph("Fecha de Registro: " + txtFecha.Text));
+				doc.Add(new Paragraph("Proveedor: " + txtDocuProveedor.Text));
+				doc.Add(new Paragraph("Razón Social: " + txtRazonSocial.Text));
+				doc.Add(new Paragraph("Total a Pagar: " + txtTotalPagar.Text));
+
+				// Agregar los detalles del DataGridView
+				doc.Add(new Paragraph("\nDetalles de los Productos Comprados:"));
 
 				// Crear una tabla con el número de columnas
 				PdfPTable table = new PdfPTable(dgvDetalles.Columns.Count);
@@ -145,17 +157,21 @@ namespace CpLicoreria2024
 					table.AddCell(column.HeaderText);
 				}
 
-				// Agregar filas
+				// Agregar filas del DataGridView
 				foreach (DataGridViewRow row in dgvDetalles.Rows)
 				{
-					foreach (DataGridViewCell cell in row.Cells)
+					if (row.Cells["idProducto"].Value != null)  // Evitar filas vacías
 					{
-						table.AddCell(cell.Value?.ToString());
+						foreach (DataGridViewCell cell in row.Cells)
+						{
+							table.AddCell(cell.Value?.ToString());
+						}
 					}
 				}
 
 				// Agregar la tabla al documento
 				doc.Add(table);
+				MessageBox.Show($"PDF exportado correctamente a {ruta}");
 			}
 			catch (Exception ex)
 			{
@@ -165,7 +181,6 @@ namespace CpLicoreria2024
 			{
 				// Cerrar el documento
 				doc.Close();
-				MessageBox.Show($"PDF exportado a {ruta}");
 			}
 		}
 

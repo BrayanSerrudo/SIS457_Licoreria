@@ -31,6 +31,11 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
 			this.label1 = new System.Windows.Forms.Label();
 			this.menuTitulo = new System.Windows.Forms.MenuStrip();
+			this.menu = new System.Windows.Forms.MenuStrip();
+			this.label2 = new System.Windows.Forms.Label();
+			this.lblUsuario = new System.Windows.Forms.Label();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.menuUsuario = new FontAwesome.Sharp.IconMenuItem();
 			this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuMantenedor = new FontAwesome.Sharp.IconMenuItem();
@@ -49,11 +54,6 @@
 			this.reportesVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.reportesComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuAcercade = new FontAwesome.Sharp.IconMenuItem();
-			this.menu = new System.Windows.Forms.MenuStrip();
-			this.label2 = new System.Windows.Forms.Label();
-			this.lblUsuario = new System.Windows.Forms.Label();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.menuTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,6 +94,67 @@
 			this.menuTitulo.Size = new System.Drawing.Size(1209, 119);
 			this.menuTitulo.TabIndex = 4;
 			this.menuTitulo.Text = "menuStrip1";
+			// 
+			// menu
+			// 
+			this.menu.AutoSize = false;
+			this.menu.BackColor = System.Drawing.Color.Black;
+			this.menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.menu.ImageScalingSize = new System.Drawing.Size(24, 24);
+			this.menu.Location = new System.Drawing.Point(0, 0);
+			this.menu.Name = "menu";
+			this.menu.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+			this.menu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.menu.Size = new System.Drawing.Size(1209, 85);
+			this.menu.TabIndex = 5;
+			this.menu.Text = "menuStrip2";
+			// 
+			// label2
+			// 
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Black;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.Location = new System.Drawing.Point(955, 29);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(87, 24);
+			this.label2.TabIndex = 9;
+			this.label2.Text = "Usuario:";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			// 
+			// lblUsuario
+			// 
+			this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblUsuario.BackColor = System.Drawing.Color.Black;
+			this.lblUsuario.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsuario.ForeColor = System.Drawing.Color.White;
+			this.lblUsuario.Location = new System.Drawing.Point(1047, 29);
+			this.lblUsuario.Name = "lblUsuario";
+			this.lblUsuario.Size = new System.Drawing.Size(142, 56);
+			this.lblUsuario.TabIndex = 8;
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackColor = System.Drawing.Color.Black;
+			this.pictureBox2.Image = global::CpLicoreria2024.Properties.Resources.Logo_removebg_preview1;
+			this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(89, 85);
+			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox2.TabIndex = 11;
+			this.pictureBox2.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox1.Image = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x666;
+			this.pictureBox1.Location = new System.Drawing.Point(0, 204);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(1209, 283);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 10;
+			this.pictureBox1.TabStop = false;
 			// 
 			// menuUsuario
 			// 
@@ -282,67 +343,6 @@
 			this.menuAcercade.Size = new System.Drawing.Size(157, 153);
 			this.menuAcercade.Text = "Acerca de";
 			this.menuAcercade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-			// 
-			// menu
-			// 
-			this.menu.AutoSize = false;
-			this.menu.BackColor = System.Drawing.Color.Black;
-			this.menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.menu.ImageScalingSize = new System.Drawing.Size(24, 24);
-			this.menu.Location = new System.Drawing.Point(0, 0);
-			this.menu.Name = "menu";
-			this.menu.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-			this.menu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.menu.Size = new System.Drawing.Size(1209, 85);
-			this.menu.TabIndex = 5;
-			this.menu.Text = "menuStrip2";
-			// 
-			// label2
-			// 
-			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label2.AutoSize = true;
-			this.label2.BackColor = System.Drawing.Color.Black;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.White;
-			this.label2.Location = new System.Drawing.Point(955, 29);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(87, 24);
-			this.label2.TabIndex = 9;
-			this.label2.Text = "Usuario:";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-			// 
-			// lblUsuario
-			// 
-			this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblUsuario.BackColor = System.Drawing.Color.Black;
-			this.lblUsuario.Font = new System.Drawing.Font("Lucida Calligraphy", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblUsuario.ForeColor = System.Drawing.Color.White;
-			this.lblUsuario.Location = new System.Drawing.Point(1047, 29);
-			this.lblUsuario.Name = "lblUsuario";
-			this.lblUsuario.Size = new System.Drawing.Size(142, 56);
-			this.lblUsuario.TabIndex = 8;
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.BackColor = System.Drawing.Color.Black;
-			this.pictureBox2.Image = global::CpLicoreria2024.Properties.Resources.Logo_removebg_preview1;
-			this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(89, 85);
-			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox2.TabIndex = 11;
-			this.pictureBox2.TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox1.Image = global::CpLicoreria2024.Properties.Resources.cerveza_vaso_984x666;
-			this.pictureBox1.Location = new System.Drawing.Point(0, 204);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(1209, 283);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 10;
-			this.pictureBox1.TabStop = false;
 			// 
 			// FrmPrincipal
 			// 

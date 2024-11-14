@@ -13,7 +13,7 @@ CREATE USER [usrlicoreria] FOR LOGIN [usrlicoreria]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [usrlicoreria]
 GO
-
+select*from Compra;
 
 DROP TABLE Empleado;
 DROP TABLE DetalleVenta;

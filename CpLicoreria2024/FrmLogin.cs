@@ -16,11 +16,11 @@ namespace CpLicoreria2024
         public FrmLogin()
         {
             InitializeComponent();
-            this.Size = new Size(422, 223);
+			this.AutoScaleMode = AutoScaleMode.Dpi;
 
 		}
 
-        private void btnSalir_Click(object sender, EventArgs e)
+		private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -52,10 +52,12 @@ namespace CpLicoreria2024
                     Util.usuario = usuario;
                     txtClave.Text = string.Empty;
                     txtUsuario.Focus();
-                    txtUsuario.Text = string.Empty;
-                    Visible = false;
-                    new FrmPrincipal(this).ShowDialog();
-                }
+					txtUsuario.SelectAll();
+
+					this.Hide();
+					FrmPrincipal frmPrincipal = new FrmPrincipal(this);
+					frmPrincipal.ShowDialog();
+				}
                 else MessageBox.Show("Usuario y/o contraseña incorrecto", " ::: Licoreria - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -64,11 +66,6 @@ namespace CpLicoreria2024
         private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == (char)Keys.Enter) btnIngresar.PerformClick();
-        }
-
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
@@ -80,5 +77,10 @@ namespace CpLicoreria2024
 
             }
         }
-    }
+
+		private void FrmLogin_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

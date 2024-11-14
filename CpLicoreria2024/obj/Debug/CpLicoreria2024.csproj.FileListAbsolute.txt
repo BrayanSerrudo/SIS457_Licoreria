@@ -71,18 +71,14 @@ C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\Cp
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmCompra.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmDetalleCompra.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmDetalleNegocio.resources
-C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmDetalleVenta.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmEmpleado.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmLogin.resources
-C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmPequeCliente.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmPequeProducto.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmPequeProveedor.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmPrincipal.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmProducto.resources
-C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmProductoPequenoVenta.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmProveedor.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmRegistroCompras.resources
-C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.FrmVenta.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.Properties.Resources.resources
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.csproj.GenerateResource.cache
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.exe.licenses
@@ -114,3 +110,7 @@ C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\bin\Debug\Sy
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\bin\Debug\System.Text.Json.xml
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\bin\Debug\System.ValueTuple.xml
+C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\bin\Debug\System.IO.Pipelines.dll
+C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\bin\Debug\System.IO.Pipelines.xml
+C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\Documents\hidrologia\SIS457_Licoreria\CpLicoreria2024\obj\Debug\CpLicoreria2024.exe.config

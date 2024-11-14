@@ -48,21 +48,23 @@
 			// txtClave
 			// 
 			this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtClave.Location = new System.Drawing.Point(144, 92);
+			this.txtClave.Location = new System.Drawing.Point(216, 138);
+			this.txtClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtClave.MaxLength = 15;
 			this.txtClave.Name = "txtClave";
 			this.txtClave.PasswordChar = '*';
-			this.txtClave.Size = new System.Drawing.Size(151, 24);
+			this.txtClave.Size = new System.Drawing.Size(224, 32);
 			this.txtClave.TabIndex = 13;
 			this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
 			// 
 			// txtUsuario
 			// 
 			this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtUsuario.Location = new System.Drawing.Point(145, 62);
+			this.txtUsuario.Location = new System.Drawing.Point(218, 93);
+			this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.txtUsuario.MaxLength = 10;
 			this.txtUsuario.Name = "txtUsuario";
-			this.txtUsuario.Size = new System.Drawing.Size(150, 24);
+			this.txtUsuario.Size = new System.Drawing.Size(223, 32);
 			this.txtUsuario.TabIndex = 12;
 			this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
 			// 
@@ -71,9 +73,10 @@
 			this.lblClave.BackColor = System.Drawing.Color.Transparent;
 			this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblClave.ForeColor = System.Drawing.Color.Lime;
-			this.lblClave.Location = new System.Drawing.Point(46, 95);
+			this.lblClave.Location = new System.Drawing.Point(69, 142);
+			this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblClave.Name = "lblClave";
-			this.lblClave.Size = new System.Drawing.Size(104, 28);
+			this.lblClave.Size = new System.Drawing.Size(156, 42);
 			this.lblClave.TabIndex = 11;
 			this.lblClave.Text = "Contraseña:";
 			// 
@@ -82,9 +85,10 @@
 			this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
 			this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblUsuario.ForeColor = System.Drawing.Color.Lime;
-			this.lblUsuario.Location = new System.Drawing.Point(48, 62);
+			this.lblUsuario.Location = new System.Drawing.Point(72, 93);
+			this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblUsuario.Name = "lblUsuario";
-			this.lblUsuario.Size = new System.Drawing.Size(85, 33);
+			this.lblUsuario.Size = new System.Drawing.Size(128, 50);
 			this.lblUsuario.TabIndex = 10;
 			this.lblUsuario.Text = "Usuario:";
 			// 
@@ -94,9 +98,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
 			this.lblTitulo.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTitulo.Location = new System.Drawing.Point(12, 7);
+			this.lblTitulo.Location = new System.Drawing.Point(18, 10);
+			this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblTitulo.Name = "lblTitulo";
-			this.lblTitulo.Size = new System.Drawing.Size(382, 32);
+			this.lblTitulo.Size = new System.Drawing.Size(573, 48);
 			this.lblTitulo.TabIndex = 9;
 			this.lblTitulo.Text = "Iniciar Sesión";
 			this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,9 +120,10 @@
 			this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSalir.Image = global::CpLicoreria2024.Properties.Resources.close;
 			this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSalir.Location = new System.Drawing.Point(220, 132);
+			this.btnSalir.Location = new System.Drawing.Point(330, 198);
+			this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnSalir.Name = "btnSalir";
-			this.btnSalir.Size = new System.Drawing.Size(80, 43);
+			this.btnSalir.Size = new System.Drawing.Size(120, 64);
 			this.btnSalir.TabIndex = 16;
 			this.btnSalir.Text = "Salir";
 			this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -130,9 +136,10 @@
 			this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnIngresar.Image = global::CpLicoreria2024.Properties.Resources.login_ok;
 			this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnIngresar.Location = new System.Drawing.Point(96, 132);
+			this.btnIngresar.Location = new System.Drawing.Point(144, 198);
+			this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnIngresar.Name = "btnIngresar";
-			this.btnIngresar.Size = new System.Drawing.Size(103, 43);
+			this.btnIngresar.Size = new System.Drawing.Size(154, 64);
 			this.btnIngresar.TabIndex = 15;
 			this.btnIngresar.Text = "Ingresar";
 			this.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -143,22 +150,23 @@
 			// 
 			this.pctLogo.BackColor = System.Drawing.Color.Transparent;
 			this.pctLogo.Image = global::CpLicoreria2024.Properties.Resources.o_Photoroom;
-			this.pctLogo.Location = new System.Drawing.Point(292, 23);
+			this.pctLogo.Location = new System.Drawing.Point(438, 34);
+			this.pctLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.pctLogo.Name = "pctLogo";
-			this.pctLogo.Size = new System.Drawing.Size(114, 133);
+			this.pctLogo.Size = new System.Drawing.Size(171, 200);
 			this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pctLogo.TabIndex = 14;
 			this.pctLogo.TabStop = false;
 			// 
 			// FrmLogin
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.Color.Black;
 			this.BackgroundImage = global::CpLicoreria2024.Properties.Resources.imaLogo;
-			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.ClientSize = new System.Drawing.Size(406, 184);
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(609, 276);
 			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnIngresar);
 			this.Controls.Add(this.pctLogo);
@@ -167,10 +175,10 @@
 			this.Controls.Add(this.lblClave);
 			this.Controls.Add(this.lblUsuario);
 			this.Controls.Add(this.lblTitulo);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.MaximizeBox = false;
-			this.MinimizeBox = false;
 			this.Name = "FrmLogin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "::: Licoreria-Login :::";

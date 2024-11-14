@@ -37,13 +37,9 @@ namespace CpLicoreria2024
                 }
             }
 			this.frmLogin = frmLogin;
-			// Agregar el manejador del evento FormClosing
-			this.FormClosing += FrmPrincipal_FormClosing;
+						
 		}
-        ///experimento cargar formulario a panel funciona
-
-
-
+        
         private void menuProveedores_Click(object sender, EventArgs e)
         {
             //CargarFormularioEnPanel(new FrmProveedor()); //cargar a panelcontenedor
@@ -62,22 +58,34 @@ namespace CpLicoreria2024
             //CargarFormularioEnPanel(new FrmCategoria()); //cargar a panelcontenedor
             new FrmCategoria().ShowDialog();
         }
-
-        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+		private bool isExitConfirmed = false;
+		private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-			var result = MessageBox.Show("¿Estás seguro de que quieres cerrar la aplicación?", "Confirmación", MessageBoxButtons.YesNo);
-
-			if (result == DialogResult.Yes)
+			// Si el usuario no ha confirmado la salida
+			if (!isExitConfirmed)
 			{
-				// Si el usuario confirma que quiere salir, se cierra la aplicación
-				Application.Exit();
+				// Muestra un cuadro de mensaje de confirmación
+				DialogResult result = MessageBox.Show("¿Desea salir de la aplicación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+				if (result == DialogResult.Yes)
+				{
+					// Marcar que el usuario ha confirmado salir
+					isExitConfirmed = true;
+
+					// Llamar a Application.Exit() para asegurarse de que la aplicación se cierre completamente
+					Application.Exit();
+				}
+				else
+				{
+					// Si el usuario elige "No", cancelamos el cierre del formulario
+					e.Cancel = true;
+				}
 			}
 			else
 			{
-				// Si el usuario no quiere salir, se cancela el cierre del formulario
-				e.Cancel = true;
+				// Si el usuario ya ha confirmado salir, no hacemos nada más
+				e.Cancel = false;
 			}
-
 		}
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,7 +119,7 @@ namespace CpLicoreria2024
 
 		private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-            new FrmVenta().ShowDialog();
+            
 		}
 
 		private void verDetalleToolStripMenuItem1_Click(object sender, EventArgs e)
