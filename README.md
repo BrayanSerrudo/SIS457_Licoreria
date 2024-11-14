@@ -40,7 +40,7 @@ Venta(id, id_Usuario, tipoDocumento, numeroDocumento, documentoCliente, nombreCl
 DetalleVenta(id, id_Venta, id_Producto, precioVenta, cantidad, subTotal)
 
 ## Entidades con campos consolidados
-++DetalleNegocio(id, nombre, direccion, nit)
++++DetalleNegocio(id, nombre, direccion, nit)
 
 Empleado(id, cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion ,celular, cargo)
 Proveedor(id, documento, razonSocial, email, telefono)
