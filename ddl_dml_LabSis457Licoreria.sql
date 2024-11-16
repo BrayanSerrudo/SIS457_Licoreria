@@ -181,41 +181,15 @@ ALTER TABLE Empleado ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Empleado ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 GO
 
--- Para proveedores
 -- PROCEDIMIENTO ALMACENADO PARA LISTAR PROVEEDOR
-ALTER PROC paProveedorListar @parametro VARCHAR(100)
+CREATE PROC paProveedorListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Proveedor
   WHERE estado<>-1 AND razonSocial LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
-GO
+Go
 
-EXEC paProveedorListar 'cerveza';
-
-INSERT INTO Proveedor(documento, razonSocial, email, telefono)
-VALUES ('7246542','vendo vinos','vinos@gmail.com','77199626');
-
-INSERT INTO Proveedor(documento, razonSocial, email, telefono)
-VALUES ('5056344','vendo singanis','singani@gmail.com','71703909');
-
-INSERT INTO Proveedor(documento, razonSocial, email, telefono)
-VALUES ('45453455','vendo licor','licor@gmail.com','77895396');
-
-INSERT INTO Proveedor(documento, razonSocial, email, telefono)
-VALUES ('454533232','vendo cerveza','cbn@gmail.com','77895377');
-
-select*from Proveedor;
-SELECT * FROM Proveedor WHERE razonSocial LIKE '%cerveza%'; -- cerveza
-
--- CLIENTE
-INSERT INTO Cliente(documento, nombreCompleto, email, telefono)
-VALUES ('xxxxxxxxx','Grover Anave LLampa', 'grover@gmail.com', '22222222' );
-INSERT INTO Cliente(documento, nombreCompleto, email, telefono)
-VALUES ('zzzzzzzzz','Maribel Anave Llampa', 'Mary@gmail.com', '3333333' );
-INSERT INTO Cliente(documento, nombreCompleto, email, telefono)
-VALUES ('********','Shirley Acapa Fulguera', 'Shirley@gmail.com', '4444444' );
-GO
-
-ALTER PROC paClienteListar
+--PROCEDIMIENTO ALMACENADO PARA LISTAR CLIENTE
+CREATE PROC paClienteListar
     @parametro VARCHAR(100)
 AS
 BEGIN
@@ -229,59 +203,23 @@ BEGIN
         email LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
     );
 END
-EXEC paClienteListar 'Acapa';
 
-select * from Cliente;
-SELECT * FROM Cliente WHERE nombreCompleto LIKE '%A%';
-select * from Empleado;
-select * from Usuario
--- usuarios registrados manualmente
-INSERT INTO Usuario(idEmpleado, usuario, clave)
-VALUES(15, 'Vico96', 'i0hcoO/nssY6WOs9pOp5Xw=='),
-(16, 'BrayanS', 'i0hcoO/nssY6WOs9pOp5Xw==');
-
--- Usuario general para la defenza
-INSERT INTO Usuario(idEmpleado, usuario, clave)
-VALUES(17, 'Sis457', 'i0hcoO/nssY6WOs9pOp5Xw==');
-
-INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES('7246545','Cristhian Vico', 'Anave', 'Llampa', 'calle Junin N°54', 77199626, 'Propietario'),
-('7777777','Brayan Daniel', 'Serrudo', 'Lopez', 'san juanillo', 54656565, 'Propietario');
-INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES('11111111','Sis457', '------', '------', '------', 33333333, 'Propietario');
-
-
-
--- Categoria
-SELECT * FROM Categoria
-INSERT INTO Categoria(descripcion)
-VALUES('Licores'),
-('vinos'),
-('Fernets'),
-('en latas'),
-('Huaris');
+--PROCEDIMIENTO ALMACENADO LISTAR Categoria
 GO
 CREATE PROC paCategoriaListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Categoria
   WHERE estado<>-1 AND descripcion LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
 GO
-  EXEC paCategoriaListar 'lat';
+-- PROCEDIMIENTO ALMACENADO LISTAR producto
 
-  --producto
-
-  SELECT*FROM Producto
-
-  GO
-  ALTER PROC paProductoListar @parametro VARCHAR(100)
+  CREATE PROC paProductoListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Producto
   WHERE estado<>-1 AND nombre LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
 GO
-  EXEC paProductoListar 'mono';
-GO
-  --Empleado
-  ALTER PROC paEmpleadoListar @parametro VARCHAR(50)
+-- PROCEDIMIENTO ALMACENADO LISTAR Empleado
+  CREATE PROC paEmpleadoListar @parametro VARCHAR(50)
   AS
   SELECT e.id, e.cedulaIdentidad, nombres, ISNULL(e.primerApellido, '') AS primerApellido, 
           ISNULL(e.segundoApellido, '') AS segundoApellido , e.direccion, e.celular, e.cargo,
@@ -292,33 +230,24 @@ GO
   Where e.estado<>-1 
   AND e.cedulaIdentidad+e.nombres+e.primerApellido+e.segundoApellido LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY e.nombres, e.primerApellido;
-
-  EXEC paEmpleadoListar 'Juan'
   GO
-  --proveedorPequeño
-  ALTER PROC paProveedorPListar @parametro VARCHAR(100)
+  -- LISTAR LISTA PEQUEÑA DE proveedor
+  CREATE PROC paProveedorPListar @parametro VARCHAR(100)
   AS SELECT p.id, p.documento, p.razonSocial FROM Proveedor p
   WHERE estado<> -1 AND p.documento LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY p.razonSocial;
   GO
-  EXEC paProveedorPListar '5'
 
-  select * from Proveedor
-  GO
 
-  ALTER PROC paProductoPListar 
-  AS SELECT pro.id, pro.codigo, pro.nombre, c.descripcion  FROM Producto pro JOIN Categoria c ON pro.idCategoria = c.id
-  WHERE estado<> -1   -- p.documento LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
+  --ALTER PROC paProductoPListar 
+  --AS SELECT pro.id, pro.codigo, pro.nombre, c.descripcion  FROM Producto pro JOIN Categoria c ON pro.idCategoria = c.id
+  --WHERE estado<> -1   -- p.documento LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
  -- ORDER BY p.razonSocial;
-  GO
-
-  EXEC paProductoPListar
-  GO
+  --GO
 
 
-
-  --procedimiento almacenado para categoria-producto                            (UTIZADO EN CRUD producto NO TOCAR)
-  ALTER PROC paProductooListar @parametro VARCHAR(100)
+  --procedimiento almacenado para categoria-producto (UTIZADO EN CRUD producto NO TOCAR)
+  CREATE PROC paProductooListar @parametro VARCHAR(100)
   AS BEGIN 
   SET NOCOUNT ON;
   SELECT
@@ -342,13 +271,10 @@ GO
          c.descripcion LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' 
    )
 END
-EXEC paProductooListar 'flores'
 GO
 
-
-
 -- Formulario pequeño de Producto para compra      FUNCIONA NO TOCARRRRR
-  ALTER PROC paProductoPequenoListar @parametro VARCHAR(100)    
+  CREATE PROC paProductoPequenoListar @parametro VARCHAR(100)    
   AS BEGIN SELECT
         pro.id ,
         pro.codigo,
@@ -360,48 +286,24 @@ GO
   pro.estado <> -1 AND 
         (@parametro IS NULL OR pro.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%')
 END
-EXEC paProductoPequenoListar 'FLOR'
 go
 
 --- Formulario pequeño Producto v2          (FUNCIONA NO TOCARRR)
-  ALTER PROC paProductoPequeListar @parametro VARCHAR(100)    
+  CREATE PROC paProductoPequeListar @parametro VARCHAR(100)    
   AS SELECT prr.id, prr.codigo, prr.nombre, prr.stock, prr.precioVenta
   FROM Producto prr 
   WHERE
   prr.estado <> -1 AND prr.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
-GO
-EXEC paProductoPequeListar 'flor de caña' 
-go
+GO 
 
 -- pequeñoCliente  funciono    NO TOCARRR
- ALTER PROC paClientePequenoListar @parametro VARCHAR(100)    
+ CREATE PROC paClientePequenoListar @parametro VARCHAR(100)    
   AS SELECT cl.id, cl.documento, cl.nombreCompleto FROM Cliente cl
   WHERE estado <> -1 AND cl.nombreCompleto LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
   ORDER BY cl.nombreCompleto;
 GO
-EXEC paClientePequenoListar 'cristhian'
-go
-
-
---compra
-
-select * from DetalleCompra;
-select*from Compra;
-ALTER TABLE Compra
-DROP CONSTRAINT fk_Compra_Usuario;
-
-ALTER TABLE Compra
-DROP Column idUsuario;
-
-
-ALTER TABLE Venta
-DROP Column idUsuario;
-ALTER TABLE Venta
-DROP CONSTRAINT fk_Venta_Usuario;
-
-GO
 -- procedimiento almacenado para mostrar los datos de DetallesCompras
-ALTER PROCEDURE ObtenerDetallesCompras
+CREATE PROCEDURE ObtenerDetallesCompras
     @Fecha DATE = NULL 
 AS
 BEGIN
@@ -432,27 +334,34 @@ BEGIN
         Categoria ca ON pr.idCategoria = ca.id
     WHERE
     (@Fecha IS NULL OR CAST(c.fechaRegistro AS DATE) = @Fecha)
-
 END
-exec ObtenerDetallesCompras;
 
+--INFORMACION PARA INTRODUCIR MANUALMENTE Detalle de  Negocio (Informacion )
 
---limpieza
-DELETE FROM Venta;
-select * from Proveedor;
-
-DBCC CHECKIDENT ('Producto', RESEED, 0);
-DBCC CHECKIDENT ('Cliente', RESEED, 0);
-DBCC CHECKIDENT ('DetalleCompra', RESEED, 0);
-DBCC CHECKIDENT ('Compra', RESEED, 0);
-DBCC CHECKIDENT ('Proveedor', RESEED, 0);
-DBCC CHECKIDENT ('Categoria', RESEED, 0);
-DBCC CHECKIDENT ('DetalleVenta', RESEED, 0);
-DBCC CHECKIDENT ('Venta', RESEED, 0);
-
--- Detalle de  Negocio (Informacion )
-select * from DetalleNegocio;
 INSERT INTO DetalleNegocio(nombre, direccion, nit)
 VALUES ('Licoreria "FUEGO"', 'Av. Marcelo Quiroga de Santa Cruz s/n.', '123456789012' );
-
-select*from Empleado;
+-- usuarios registrados manualmente
+INSERT INTO Usuario(idEmpleado, usuario, clave)
+VALUES(1, 'Vico96', 'i0hcoO/nssY6WOs9pOp5Xw=='),
+(2, 'BrayanS', 'i0hcoO/nssY6WOs9pOp5Xw==');
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
+VALUES('7246545','Cristhian Vico', 'Anave', 'Llampa', 'calle Junin N°54', 77199626, 'Propietario'),
+('7777777','Brayan Daniel', 'Serrudo', 'Lopez', 'san juanillo', 54656565, 'Propietario');
+-- Usuario general para la defenza
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
+VALUES('11111111','Sis457', '------', '------', '------', 33333333, 'Propietario');
+INSERT INTO Usuario(idEmpleado, usuario, clave)
+VALUES(3, 'Sis457', 'i0hcoO/nssY6WOs9pOp5Xw==');
+-- Datos CATEGORIA
+INSERT INTO Categoria(descripcion)
+VALUES('Vinos'),
+('Licores'),
+('Cervezas'),
+('Gaseosas'),
+('Accesorios'),
+('Snack'),
+('Bebidas Sin Alcohol'),
+('Energizantes');
+-- agregue nuevos productos desde la aplicacion
+--agregue nuevos clientes desde la aplicacion
+--agregue nuevos proveedores desde la aplicacion
