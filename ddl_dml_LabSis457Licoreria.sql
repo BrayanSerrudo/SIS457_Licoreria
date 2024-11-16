@@ -233,17 +233,23 @@ EXEC paClienteListar 'Acapa';
 
 select * from Cliente;
 SELECT * FROM Cliente WHERE nombreCompleto LIKE '%A%';
-
-
-
+select * from Empleado;
+select * from Usuario
+-- usuarios registrados manualmente
 INSERT INTO Usuario(idEmpleado, usuario, clave)
-VALUES(1, 'Jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');
+VALUES(15, 'Vico96', 'i0hcoO/nssY6WOs9pOp5Xw=='),
+(16, 'BrayanS', 'i0hcoO/nssY6WOs9pOp5Xw==');
+
+-- Usuario general para la defenza
+INSERT INTO Usuario(idEmpleado, usuario, clave)
+VALUES(17, 'Sis457', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES('7246542','Juan', 'Peres', 'Lopez', 'Loa 50', 77667767, 'cajero');
+VALUES('7246545','Cristhian Vico', 'Anave', 'Llampa', 'calle Junin N°54', 77199626, 'Propietario'),
+('7777777','Brayan Daniel', 'Serrudo', 'Lopez', 'san juanillo', 54656565, 'Propietario');
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
+VALUES('11111111','Sis457', '------', '------', '------', 33333333, 'Propietario');
 
-SELECT * FROM Usuario;
-SELECT * FROM Empleado;
 
 
 -- Categoria
@@ -300,7 +306,6 @@ GO
   select * from Proveedor
   GO
 
-  --productoPequeño NO VALE
   ALTER PROC paProductoPListar 
   AS SELECT pro.id, pro.codigo, pro.nombre, c.descripcion  FROM Producto pro JOIN Categoria c ON pro.idCategoria = c.id
   WHERE estado<> -1   -- p.documento LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
