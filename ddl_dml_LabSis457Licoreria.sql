@@ -34,7 +34,6 @@ CREATE TABLE DetalleNegocio (
     nit NVARCHAR(50)  
 );
 
-
 CREATE TABLE Empleado(
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   cedulaIdentidad VARCHAR(12) NOT NULL,
@@ -70,14 +69,13 @@ CREATE TABLE Usuario (
   CONSTRAINT fk_Usuario_Empleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(id)
 ); 
 
+
 CREATE TABLE Compra (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idUsuario INT NOT NULL,
   idProveedor INT NOT NULL,
   tipoDocumento VARCHAR(50) NOT NULL,
   numeroDocumento VARCHAR(50) NOT NULL,
   montoTotal DECIMAL(10,2) NOT NULL,
-  CONSTRAINT fk_Compra_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuario(id),
   CONSTRAINT fk_Compra_Proveedor FOREIGN KEY (idProveedor) REFERENCES Proveedor(id)
 ); 
 
@@ -113,7 +111,6 @@ CREATE TABLE DetalleCompra (
 
 CREATE TABLE Venta (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idUsuario INT NOT NULL,
   tipoDocumento VARCHAR(50) NOT NULL,
   numeroDocumento VARCHAR(50) NOT NULL,
   documentoCliente VARCHAR(50) NOT NULL,
@@ -121,7 +118,6 @@ CREATE TABLE Venta (
   montoPago DECIMAL(10,2) NOT NULL,
   montoCambio DECIMAL(10,2) NOT NULL,
   montoTotal DECIMAL(10,2) NOT NULL,
-  CONSTRAINT fk_Venta_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuario(id)
 ); 
 
 CREATE TABLE DetalleVenta (
@@ -135,6 +131,7 @@ CREATE TABLE DetalleVenta (
   CONSTRAINT fk_DetalleVenta_Producto FOREIGN KEY (idProducto) REFERENCES Producto(id)
 ); 
 
+  
 
 ALTER TABLE DetalleNegocio ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE DetalleNegocio ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -369,3 +366,4 @@ VALUES('Vinos'),
 -- agregue nuevos productos desde la aplicacion
 --agregue nuevos clientes desde la aplicacion
 --agregue nuevos proveedores desde la aplicacion
+
