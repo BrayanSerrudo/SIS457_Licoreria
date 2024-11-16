@@ -13,7 +13,7 @@ CREATE USER [usrlicoreria] FOR LOGIN [usrlicoreria]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [usrlicoreria]
 GO
-select*from Compra;
+
 
 DROP TABLE Empleado;
 DROP TABLE DetalleVenta;
@@ -341,17 +341,21 @@ END
 INSERT INTO DetalleNegocio(nombre, direccion, nit)
 VALUES ('Licoreria "FUEGO"', 'Av. Marcelo Quiroga de Santa Cruz s/n.', '123456789012' );
 -- usuarios registrados manualmente
-INSERT INTO Usuario(idEmpleado, usuario, clave)
-VALUES(1, 'Vico96', 'i0hcoO/nssY6WOs9pOp5Xw=='),
-(2, 'BrayanS', 'i0hcoO/nssY6WOs9pOp5Xw==');
+
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES('7246545','Cristhian Vico', 'Anave', 'Llampa', 'calle Junin N°54', 77199626, 'Propietario'),
 ('7777777','Brayan Daniel', 'Serrudo', 'Lopez', 'san juanillo', 54656565, 'Propietario');
 -- Usuario general para la defenza
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES('11111111','Sis457', '------', '------', '------', 33333333, 'Propietario');
+
+INSERT INTO Usuario(idEmpleado, usuario, clave)
+VALUES(1, 'Vico96', 'i0hcoO/nssY6WOs9pOp5Xw=='),
+(2, 'BrayanS', 'i0hcoO/nssY6WOs9pOp5Xw==');
 INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES(3, 'Sis457', 'i0hcoO/nssY6WOs9pOp5Xw==');
+
+
 -- Datos CATEGORIA
 INSERT INTO Categoria(descripcion)
 VALUES('Vinos'),
