@@ -68,7 +68,7 @@ CREATE TABLE Usuario (
   clave VARCHAR(250) NOT NULL,
   CONSTRAINT fk_Usuario_Empleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(id)
 ); 
-
+select*from Usuario
 
 CREATE TABLE Compra (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -366,4 +366,6 @@ VALUES('Vinos'),
 -- agregue nuevos productos desde la aplicacion
 --agregue nuevos clientes desde la aplicacion
 --agregue nuevos proveedores desde la aplicacion
+select*from Compra
+
 
