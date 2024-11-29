@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using WebLicoreria.Models;
 
 namespace WebLicoreria.Controllers
 {
+    [Authorize]
     public class CategoriumController : Controller
     {
         private readonly FinalLicoreriaContext _context;
@@ -57,7 +59,7 @@ namespace WebLicoreria.Controllers
         {
             if (!string.IsNullOrEmpty(categorium.Descripcion))
             {
-                categorium.UsuarioRegistro = "Sis457";
+                categorium.UsuarioRegistro = User.Identity.Name;
                 categorium.FechaRegistro = DateTime.Now;
                 categorium.Estado = 1;
                 _context.Add(categorium);

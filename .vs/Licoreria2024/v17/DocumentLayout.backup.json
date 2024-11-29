@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\views\\proveedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\views\\proveedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\controllers\\proveedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\controllers\\proveedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\controllers\\categoriumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\controllers\\categoriumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -15,8 +35,24 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ddl_dml_FinalLicoreria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\views\\shared\\_logoutpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\views\\shared\\_logoutpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|c:\\users\\dell\\documents\\hidrologia\\sis457_licoreria\\weblicoreria\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E7026FC-61F9-4FC5-A3C1-D61057CF9FA0}|WebLicoreria\\WebLicoreria.csproj|solutionrelative:weblicoreria\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\ddl_dml_FinalLicoreria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ddl_dml_FinalLicoreria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\ddl_dml_FinalLicoreria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ddl_dml_FinalLicoreria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,45 +74,143 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProveedorController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\ProveedorController.cs",
+              "RelativeDocumentMoniker": "WebLicoreria\\Controllers\\ProveedorController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\ProveedorController.cs",
+              "RelativeToolTip": "WebLicoreria\\Controllers\\ProveedorController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwD0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T04:20:51.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "WebLicoreria\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "WebLicoreria\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwD0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T04:20:35.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriumController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\CategoriumController.cs",
+              "RelativeDocumentMoniker": "WebLicoreria\\Controllers\\CategoriumController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\CategoriumController.cs",
+              "RelativeToolTip": "WebLicoreria\\Controllers\\CategoriumController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwD0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T04:19:57.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Program.cs",
+              "RelativeDocumentMoniker": "WebLicoreria\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Program.cs",
+              "RelativeToolTip": "WebLicoreria\\Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T04:00:43.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebLicoreria\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebLicoreria\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T03:59:10.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_LogoutPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "RelativeDocumentMoniker": "WebLicoreria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "RelativeToolTip": "WebLicoreria\\Views\\Shared\\_LogoutPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T03:55:36.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "WebLicoreria\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "WebLicoreria\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T03:50:30.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WebLicoreria\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WebLicoreria\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowBgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:35:36.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "WebLicoreria\\Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "WebLicoreria\\Models\\AccountViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:30:54.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Cliente\\Index.cshtml",
               "RelativeDocumentMoniker": "WebLicoreria\\Views\\Cliente\\Index.cshtml",
               "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Cliente\\Index.cshtml",
               "RelativeToolTip": "WebLicoreria\\Views\\Cliente\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-28T23:20:14.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ddl_dml_FinalLicoreria.sql ",
               "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\ddl_dml_FinalLicoreria.sql",
               "RelativeDocumentMoniker": "ddl_dml_FinalLicoreria.sql",
               "ToolTip": "ddl_dml_FinalLicoreria.sql ",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2024-11-25T16:30:47.364Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Proveedor\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebLicoreria\\Views\\Proveedor\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\Documents\\hidrologia\\SIS457_Licoreria\\WebLicoreria\\Views\\Proveedor\\Index.cshtml",
-              "RelativeToolTip": "WebLicoreria\\Views\\Proveedor\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T23:39:31.61Z",
               "EditorCaption": ""
             }
           ]

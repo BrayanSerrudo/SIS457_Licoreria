@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using WebLicoreria.Models;
 
 namespace WebLicoreria.Controllers
 {
+    [Authorize]
     public class ProveedorController : Controller
     {
         private readonly FinalLicoreriaContext _context;
@@ -57,7 +59,7 @@ namespace WebLicoreria.Controllers
         {
             if (!string.IsNullOrEmpty(proveedor.Documento) && !string.IsNullOrEmpty(proveedor.RazonSocial) && !string.IsNullOrEmpty(proveedor.Email) && !string.IsNullOrEmpty(proveedor.Telefono))
             {
-                proveedor.UsuarioRegistro = "Sis457";
+                proveedor.UsuarioRegistro = User.Identity.Name;
                 proveedor.FechaRegistro = DateTime.Now;
                 proveedor.Estado = 1;
                 _context.Add(proveedor);

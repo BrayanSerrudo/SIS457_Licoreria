@@ -182,6 +182,7 @@ VALUES(1, 'Vico96', 'i0hcoO/nssY6WOs9pOp5Xw=='),
 INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES(3, 'Sis457', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
+select *from Usuario
 -- Datos CATEGORIA
 INSERT INTO Categoria(descripcion)
 VALUES('Vinos'),
