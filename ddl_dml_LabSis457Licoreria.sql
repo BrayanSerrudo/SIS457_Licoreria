@@ -152,6 +152,7 @@ ALTER TABLE DetalleCompra ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Elimina
 ALTER TABLE Producto ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Producto ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Producto ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
+ALTER TABLE Producto ADD tipoUnidad VARCHAR(70) NOT NULL;
 
 ALTER TABLE Categoria ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Categoria ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -366,6 +367,8 @@ VALUES('Vinos'),
 -- agregue nuevos productos desde la aplicacion
 --agregue nuevos clientes desde la aplicacion
 --agregue nuevos proveedores desde la aplicacion
-select*from Compra
+select*from Producto
+INSERT INTO Producto(idCategoria, codigo, nombre, descripcion, tipoUnidad, stock, precioCompra, precioVenta)
+VALUES (1,'001','leche','productos argentinos','Caja', 0,0,0 );
 
 

@@ -1,39 +1,38 @@
-﻿@model IEnumerable<WebLicoreria.Models.Cliente>
+﻿@model IEnumerable<WebLicoreria.Models.Producto>
 
 @{
-    ViewData["Title"] = "Clientes";
+    ViewData["Title"] = "Productos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-
-
-
-
-
-
-
 
 <style>
     /* Cambiar el color de los encabezados de la tabla */
     table.table th {
         color: black;
+        padding: 8px;
     }
 
     /* Cambiar el color de las celdas de la tabla (datos) */
     table.table td {
         color: black;
-        padding: 5px;
+        padding: 3px 8px;
+        text-align: left;
+        white-space: normal;
     }
+
+        /* Ajustar el texto numérico a la derecha */
+        table.table td.numeric {
+            text-align: right; /* Alinea números a la derecha */
+        }
 
     /* Reducir el alto de las filas */
     table.table tr {
-        line-height: 1.2; /* Ajustar el alto de las filas */
+        line-height: 1; /* Ajustar el alto de las filas */
     }
 
 </style>
 
-<h1>Clientes</h1>
+<h1>Productos</h1>
 
 <p>
     <a asp-action="Create"><i class="fa fa-plus"></i> Crear Nuevo</a>
@@ -41,13 +40,16 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Documento</th>
-            <th>Nombre Completo</th>
-            <th>Email</th>
-            <th>Teléfono</th>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Categoría</th>
+            <th>Tipo de Unidad</th>
+            <th>Stock</th>
+            <th>Precio Compra</th>
+            <th>Precio Venta</th>
             <th>Usuario Regístro</th>
             <th>Fecha Regístro</th>
-            
             <th></th>
         </tr>
     </thead>
@@ -55,16 +57,28 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Documento)
+                @Html.DisplayFor(modelItem => item.Codigo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NombreCompleto)
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
+                @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipoUnidad)
+            </td>
+            <td class="numeric">
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+                <td class="numeric">
+                @Html.DisplayFor(modelItem => item.PrecioCompra)
+            </td>
+                <td class="numeric">
+                @Html.DisplayFor(modelItem => item.PrecioVenta)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UsuarioRegistro)
@@ -73,6 +87,7 @@
                 @Html.DisplayFor(modelItem => item.FechaRegistro)
             </td>
 
+            
             <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" title="Editar"><i class="fa fa-edit"></i></a> |
                     <a asp-action="Details" asp-route-id="@item.Id" title="Detalle"><i class="fa fa-list"></i></a> |

@@ -1,0 +1,161 @@
+﻿@model WebLicoreria.Models.Compra
+
+@{
+    ViewData["Title"] = "Registrar Compra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Compra</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Proveedor -->
+            <div class="form-group">
+                <label class="control-label">Proveedor</label>
+                <select asp-for="IdProveedor" class="form-control" asp-items="ViewBag.Proveedor"></select>
+            </div>
+
+       
+
+            <!-- Tipo de Documento -->
+            <div class="form-group">
+                <label for="TipoDocumento">Tipo de Documento</label>
+                <select asp-for="TipoDocumento" class="form-control" asp-items="@(ViewData["TipoDocumento"] as IEnumerable<SelectListItem>)"></select>
+            </div>
+
+            <!-- Número de Documento -->
+            <div class="form-group">
+                <label class="control-label">Número de Documento</label>
+                <input asp-for="NumeroDocumento" class="form-control" />
+                <span asp-validation-for="NumeroDocumento" class="text-danger"></span>
+            </div>
+
+            <!-- Monto Total -->
+            <div class="form-group">
+                <label class="control-label">Monto Total</label>
+                <input asp-for="MontoTotal" class="form-control" readonly />
+                <span asp-validation-for="MontoTotal" class="text-danger"></span>
+            </div>
+
+            <!-- Botón para Registrar Compra -->
+            <div class="form-group">
+                <input type="submit" value="Registrar Compra" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-8">
+        <!-- Formulario para agregar productos -->
+        <h4>Agregar Productos</h4>
+        <div class="form-group">
+            <label>Producto</label>
+            <select id="idProducto" class="form-control">
+                @foreach (var producto in ViewBag.Productos)
+                {
+                    <option value="@producto.Id">@producto.Nombre</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Cantidad</label>
+            <input id="cantidad" type="number" class="form-control" min="1" />
+        </div>
+
+        <div class="form-group">
+            <label>Precio de Compra</label>
+            <input id="precioCompra" type="number" class="form-control" min="0" />
+        </div>
+
+        <button type="button" id="agregarProducto" class="btn btn-success">Agregar Producto</button>
+        <hr>
+
+        <!-- Tabla de Productos Agregados -->
+        <h4>Productos Agregados</h4>
+        <table id="tablaProductos" class="table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán dinámicamente los productos -->
+            </tbody>
+        </table>
+
+        <!-- Monto Total de la Compra -->
+        <h3>Monto Total: $<span id="montoTotal">0</span></h3>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    <script>
+        // Lista para almacenar los productos agregados
+        let productos = [];
+        let montoTotal = 0;
+
+        // Función para agregar un producto
+        $("#agregarProducto").click(function () {
+            let idProducto = $("#idProducto").val();
+            let cantidad = $("#cantidad").val();
+            let precioCompra = $("#precioCompra").val();
+
+            // Validar que los campos no estén vacíos
+            if (!idProducto || !cantidad || !precioCompra) {
+                alert("Por favor, complete todos los campos.");
+                return;
+            }
+
+            // Crear objeto de producto
+            let producto = {
+                id: idProducto,
+                cantidad: cantidad,
+                precioCompra: precioCompra,
+                subtotal: cantidad * precioCompra
+            };
+
+            // Agregar el producto al array de productos
+            productos.push(producto);
+
+            // Crear la fila para la tabla de productos agregados
+            let row = `<tr>
+                        <td>${producto.id}</td>
+                        <td>${producto.cantidad}</td>
+                        <td>${producto.precioCompra}</td>
+                        <td>${producto.subtotal}</td>
+                        <td><button type="button" class="btn btn-danger" onclick="eliminarProducto(${productos.length - 1})">Eliminar</button></td>
+                    </tr>`;
+            $("#tablaProductos tbody").append(row);
+
+            // Actualizar el monto total
+            montoTotal += producto.subtotal;
+            $("#montoTotal").text(montoTotal);
+
+            // Limpiar los campos después de agregar el producto
+            $("#cantidad").val('');
+            $("#precioCompra").val('');
+        });
+
+        // Función para eliminar un producto de la lista
+        function eliminarProducto(index) {
+            let productoEliminado = productos.splice(index, 1)[0];
+            montoTotal -= productoEliminado.subtotal;
+            $("#montoTotal").text(montoTotal);
+            $("#tablaProductos tbody tr").eq(index).remove();
+        }
+    </script>
+}

@@ -222,3 +222,5 @@ VALUES(12418453, 'Coca Cola Ltd.', 'CocaCola@gmail.com',71503408),
 (13198142, 'CBN Cerveceria Boliviana Nacional', 'CBN@gmail.com', 72018341),
 (14365195, 'Vital Ltd.', 'Vital@gmail.com', 76719161),
 (10357583, 'Proveedor Monsters', 'monsters@gmail.com', 70597694);
+
+select *from Producto 

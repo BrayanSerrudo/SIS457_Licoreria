@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebLicoreria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5142d7590bd5904616d99005ea686df141c7172")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ed1c8e09cb58dcf75f175705e872a640d9cf7ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebLicoreria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebLicoreria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
